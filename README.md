@@ -1,0 +1,2 @@
+# stoic-quotes
+Stoic Quotes
