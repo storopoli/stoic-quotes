@@ -8,6 +8,7 @@ license = "MIT"
 readme = "README.md"
 
 [dependencies]
+anyhow = "1.0.79"
 askama = "0.12.1"
 axum = "0.7.3"
 tokio = { version = "1.35.1", features = ["full"] }
