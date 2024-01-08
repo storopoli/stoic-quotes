@@ -1,0 +1,15 @@
+[package]
+name = "stoic-quotes"
+version = "0.1.0"
+edition = "2021"
+authors = ["Jose Storopoli <jose@storopoli.io>"]
+description = "Stoic quotes API backend"
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
+askama = "0.12.1"
+axum = "0.7.3"
+tokio = { version = "1.35.1", features = ["full"] }
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
