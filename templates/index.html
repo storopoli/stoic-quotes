@@ -23,6 +23,50 @@
             }
         }
     </style>
+    <!-- htmx transition -->
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fade-out {
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes slide-from-right {
+            from {
+                transform: translateX(90px);
+            }
+        }
+
+        @keyframes slide-to-left {
+            to {
+                transform: translateX(-90px);
+            }
+        }
+
+        /* define animations for the old and new content */
+        ::view-transition-old(slide-it) {
+            animation:
+                180ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+                600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+        }
+
+        ::view-transition-new(slide-it) {
+            animation:
+                420ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+                600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+        }
+
+        /* tie the view transition to a given CSS class */
+        .sample-transition {
+            view-transition-name: slide-it;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +76,7 @@
                 Please Enable JavaScript (I know, it sucks...)
             </blockquote>
         </div>
-        <button hx-get="/quote" hx-trigger="click" hx-target="#quote" hx-swap="outerHTML"
+        <button hx-get="/quote" hx-trigger="click" hx-target="#quote" hx-swap="outerHTML transition:true"
             class="mt-10 flex justify-center items-center w-14 h-14 text-xl transition-colors duration-300 transform bg-gray-800 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-80">
             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
                 <path fill="evenodd" clip="evenodd"
