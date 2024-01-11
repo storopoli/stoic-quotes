@@ -28,13 +28,17 @@
 <body>
     <div class="min-h-screen bg-gray-800 flex flex-col items-center justify-center text-white">
         <div class="border-4 border-gray-600 p-10 rounded-lg bg-gray-900">
-            <blockquote id="quote" class="text-center">
-                <p class="text-2xl font-semibold md:text-4xl">
-                    "The only true wisdom is in knowing you know nothing."
-                </p>
-                <footer class="mt-4 text-xl">- Socrates</footer>
+            <blockquote hx-get="/quote" hx-swap="outerHTML" hx-trigger="load" id="quote" class="text-center">
+                Please Enable JavaScript (I know, it sucks...)
             </blockquote>
         </div>
+        <button hx-get="/quote" hx-trigger="click" hx-target="#quote" hx-swap="outerHTML"
+            class="mt-10 flex justify-center items-center w-14 h-14 text-xl transition-colors duration-300 transform bg-gray-800 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
+                <path fill="evenodd" clip="evenodd"
+                    d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" />
+            </svg>
+        </button>
         <a href="https://github.com/storopoli/stoic-quotes" target="_blank" rel="noopener noreferrer"
             class="mt-10 flex">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
