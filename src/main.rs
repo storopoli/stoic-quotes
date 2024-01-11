@@ -52,6 +52,7 @@ async fn main() -> anyhow::Result<()> {
     let app = Router::new().route("/", get(root));
 
     // run our app with hyper, listening globally on port 80
+    // FIXME: use https port 443
     let port = 80_u16;
     let addr = tokio::net::TcpListener::bind(format!("0.0.0.0:{port}"))
         .await
