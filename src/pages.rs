@@ -9,8 +9,8 @@ use axum::{
 /// into valid HTML for axum to serve.
 pub struct HtmlTemplate<T>(T);
 
-// Allows us to convert Askama HTML templates into valid HTML for axum
-// to serve in the response.
+/// Allows us to convert Askama HTML templates into valid HTML for axum
+/// to serve in the response.
 impl<T> IntoResponse for HtmlTemplate<T>
 where
     T: Template,
@@ -30,10 +30,14 @@ where
     }
 }
 
+/// An askama template that we'll use to render the root HTML element.
 #[derive(Template)]
 #[template(path = "index.html")]
 struct IndexTemplate {}
 
+/// An askama template that we'll use to render the quote HTML elements.
+/// It has htmx attributes that allow us to refresh the quote without
+/// refreshing the entire page.
 #[derive(Template)]
 #[template(path = "quote.html")]
 struct QuoteTemplate {
@@ -41,13 +45,22 @@ struct QuoteTemplate {
     author: String,
 }
 
-pub async fn root() -> impl IntoResponse {
+/// Returns the rendered askama template for the root HTML element.
+pub async fn root() -> Response {
     let template = IndexTemplate {};
-    HtmlTemplate(template)
+    HtmlTemplate(template).into_response()
 }
 
-pub async fn quote() -> impl IntoResponse {
+/// Returns the rendered askama template for a random quote HTML element.
+pub async fn quote() -> Response {
     let Quote { text, author } = random_quote();
     let template = QuoteTemplate { text, author };
-    HtmlTemplate(template)
+    HtmlTemplate(template).into_response()
+}
+
+/// Returns a plain text random quote without any HTML.
+pub async fn plain_quote() -> Response {
+    let Quote { text, author } = random_quote();
+    let formatted_quote: String = format!("\"{}\"\n - {}", text, author);
+    Html(formatted_quote).into_response()
 }
