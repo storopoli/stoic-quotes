@@ -26,6 +26,21 @@ Leaving the whole app to consume 2mb of memory.
 
 :heart: Rust!
 
+## Terminal-ready
+
+Yes, if you despise the bloated browsers and you prefer the warm embrace
+of the terminal you can get your stoic quotes without leaving the terminal:
+
+```bash
+$ wget -qO- stoicquotes.io
+"It is better to be despised for simplicity than to suffer agonies from everlasting pretense."
+ - Seneca
+
+$ curl stoicquotes.io
+"It is better to be despised for simplicity than to suffer agonies from everlasting pretense."
+ - Seneca
+```
+
 ## License
 
 This content is licensed under a
