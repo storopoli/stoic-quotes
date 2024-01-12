@@ -12,6 +12,20 @@ The whole app runs with [Rust](https://rust-lang.org) using
 - [tailwindcss](https://tailwindcss.com/)
 - [Satoshi Font](https://www.fontshare.com/fonts/satoshi)
 
+<div align="center">
+    <img src="screenshot.png" alt="Description" width="300"/>
+</div>
+
+## Performance
+
+This motherfucker is fast AF!
+
+It only consumes 2.2mb of memory and the cheapest CPU VPS available will handle it.
+The JSON data is loaded into memory (so that takes ≈0.2mb).
+Leaving the whole app to consume 2mb of memory.
+
+:heart: Rust!
+
 ## License
 
 This content is licensed under a
