@@ -38,10 +38,10 @@ pub fn read_data() -> Result<Vec<Quote>> {
     from_str(content)
 }
 
-/// Returns a random [`Quote`] from the [`Vec`] of [`Quote`]s: [`QUOTES`].
+/// Returns a random [`Quote`] from the [`Vec`] of [`Quote`]s: [`struct@QUOTES`].
 /// Currently, this function uses [`rand::thread_rng()`] to generate
-/// a random number between 0 and the length of [`QUOTES`].
-/// Then, it clones the [`QUOTES`] at the random index and returns it.
+/// a random number between 0 and the length of [`struct@QUOTES`].
+/// Then, it clones the [`struct@QUOTES`] at the random index and returns it.
 pub fn random_quote() -> Quote {
     let mut rng = thread_rng();
     let index = rng.gen_range(0..QUOTES.len());
