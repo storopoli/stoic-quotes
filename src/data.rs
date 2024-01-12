@@ -1,3 +1,6 @@
+//! Module that has functions and structs that handles all the data parsing
+//! into stoic quotes.
+
 use lazy_static::lazy_static;
 use rand::{thread_rng, Rng};
 use serde::{Deserialize, Serialize};

@@ -1,3 +1,6 @@
+//! Module that has functions and structs that handles the Askama templates
+//! to be rendered as HTML responses by Axum.
+
 use crate::data::{random_quote, Quote};
 use askama::Template;
 use axum::{

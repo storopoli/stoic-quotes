@@ -1,3 +1,5 @@
+//! Module that has functions that handles the Axum [`Router`].
+
 use crate::pages::{plain_quote, quote, root};
 use axum::{http::header::USER_AGENT, http::Request, response::Response, routing::get, Router};
 use tower_http::trace::TraceLayer;
