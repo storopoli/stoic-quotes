@@ -1,6 +1,8 @@
+//! Module that has functions that handles the Axum [`Router`].
+
 use crate::pages::{plain_quote, quote, root};
-use anyhow::{Context, Result};
 use axum::{http::header::USER_AGENT, http::Request, response::Response, routing::get, Router};
+use tower_http::trace::TraceLayer;
 use tracing::info;
 
 /// Handles the User Agent header
@@ -24,22 +26,237 @@ async fn handle_user_agent<T>(req: Request<T>) -> Response {
     }
 }
 
-pub async fn app() -> Result<()> {
+/// Creates an Axum [`Router`] that only handles GET requests to
+/// `/` and `/quote`.
+pub fn app() -> Router {
     // Create a router
     info!("initializing router...");
-    let app = Router::new()
+    Router::new()
         .route("/", get(handle_user_agent))
-        .route("/quote", get(quote));
+        .route("/quote", get(quote))
+        // We can still add middleware
+        .layer(TraceLayer::new_for_http())
+}
 
-    // run our app with hyper, listening globally on port 80
-    // FIXME: use https port 443
-    let port = 80_u16;
-    let addr = tokio::net::TcpListener::bind(format!("0.0.0.0:{port}"))
-        .await
-        .unwrap();
-    info!("router initialized, listening on port {:?}", port);
-    axum::serve(addr, app)
-        .await
-        .context("error while starting server")?;
-    Ok(())
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use axum::{
+        body::Body,
+        http::{Request, StatusCode},
+    };
+    use http_body_util::BodyExt; // for `collect`
+    use std::str::from_utf8;
+    use tower::{Service, ServiceExt}; // for `call`, `oneshot`, and `ready`
+
+    #[tokio::test]
+    async fn get_root() {
+        let app = app();
+
+        let response = app
+            .oneshot(Request::builder().uri("/").body(Body::empty()).unwrap())
+            .await
+            .unwrap();
+
+        assert_eq!(response.status(), StatusCode::OK);
+
+        // Ensuring HTML is in the response by looking for typical HTML tags.
+        let body_bytes = response.into_body().collect().await.unwrap().to_bytes();
+        let body_str = from_utf8(&body_bytes).unwrap();
+        assert!(
+            body_str.contains('<') && body_str.contains('>'),
+            "Body doesn't contain HTML: {body_str}",
+        );
+    }
+
+    #[tokio::test]
+    async fn get_quote() {
+        let app = app();
+
+        let response = app
+            .oneshot(
+                Request::builder()
+                    .uri("/quote")
+                    .body(Body::empty())
+                    .unwrap(),
+            )
+            .await
+            .unwrap();
+
+        assert_eq!(response.status(), StatusCode::OK);
+
+        // Ensuring HTML is in the response by looking for typical HTML tags.
+        let body_bytes = response.into_body().collect().await.unwrap().to_bytes();
+        let body_str = from_utf8(&body_bytes).unwrap();
+        assert!(
+            body_str.contains('<') && body_str.contains('>'),
+            "Body doesn't contain HTML: {body_str}",
+        );
+    }
+
+    #[tokio::test]
+    async fn get_unknown() {
+        let app = app();
+
+        let response = app
+            .oneshot(Request::builder().uri("/foo").body(Body::empty()).unwrap())
+            .await
+            .unwrap();
+
+        assert_eq!(response.status(), StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn post_root() {
+        let app = app();
+
+        let response = app
+            .oneshot(
+                Request::builder()
+                    .method("POST")
+                    .uri("/")
+                    .body(Body::empty())
+                    .unwrap(),
+            )
+            .await
+            .unwrap();
+
+        assert_eq!(response.status(), StatusCode::METHOD_NOT_ALLOWED);
+    }
+
+    #[tokio::test]
+    async fn post_quote() {
+        let app = app();
+
+        let response = app
+            .oneshot(
+                Request::builder()
+                    .method("POST")
+                    .uri("/quote")
+                    .body(Body::empty())
+                    .unwrap(),
+            )
+            .await
+            .unwrap();
+
+        assert_eq!(response.status(), StatusCode::METHOD_NOT_ALLOWED)
+    }
+
+    #[tokio::test]
+    async fn post_unknown() {
+        let app = app();
+
+        let response = app
+            .oneshot(
+                Request::builder()
+                    .method("POST")
+                    .uri("/foo")
+                    .body(Body::empty())
+                    .unwrap(),
+            )
+            .await
+            .unwrap();
+
+        assert_eq!(response.status(), StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn multiple_request() {
+        let mut app = app().into_service();
+
+        let request = Request::builder().uri("/").body(Body::empty()).unwrap();
+        let response = ServiceExt::<Request<Body>>::ready(&mut app)
+            .await
+            .unwrap()
+            .call(request)
+            .await
+            .unwrap();
+        assert_eq!(response.status(), StatusCode::OK);
+
+        let request = Request::builder().uri("/").body(Body::empty()).unwrap();
+        let response = ServiceExt::<Request<Body>>::ready(&mut app)
+            .await
+            .unwrap()
+            .call(request)
+            .await
+            .unwrap();
+        assert_eq!(response.status(), StatusCode::OK);
+    }
+
+    #[tokio::test]
+    async fn get_root_curl() {
+        let app = app();
+
+        let response = app
+            .oneshot(
+                Request::builder()
+                    .header("User-Agent", "curl/8.4.0")
+                    .uri("/")
+                    .body(Body::empty())
+                    .unwrap(),
+            )
+            .await
+            .unwrap();
+
+        assert_eq!(response.status(), StatusCode::OK);
+
+        // Ensuring no HTML is in the response by looking for typical HTML tags.
+        let body_bytes = response.into_body().collect().await.unwrap().to_bytes();
+        let body_str = from_utf8(&body_bytes).unwrap();
+        assert!(
+            !body_str.contains('<') && !body_str.contains('>'),
+            "Body contains HTML: {body_str}",
+        );
+    }
+
+    #[tokio::test]
+    async fn get_root_wget() {
+        let app = app();
+
+        let response = app
+            .oneshot(
+                Request::builder()
+                    .header("User-Agent", "Wget/1.21.4")
+                    .uri("/")
+                    .body(Body::empty())
+                    .unwrap(),
+            )
+            .await
+            .unwrap();
+
+        assert_eq!(response.status(), StatusCode::OK);
+
+        // Ensuring no HTML is in the response by looking for typical HTML tags.
+        let body_bytes = response.into_body().collect().await.unwrap().to_bytes();
+        let body_str = from_utf8(&body_bytes).unwrap();
+        assert!(
+            !body_str.contains('<') && !body_str.contains('>'),
+            "Body contains HTML: {body_str}",
+        );
+    }
+
+    #[tokio::test]
+    async fn get_quote_htmx() {
+        let app = app();
+
+        let response = app
+            .oneshot(
+                Request::builder()
+                    .uri("/quote")
+                    .body(Body::empty())
+                    .unwrap(),
+            )
+            .await
+            .unwrap();
+
+        assert_eq!(response.status(), StatusCode::OK);
+
+        // Ensuring that we have id = "quote" so that htmx can do its thing
+        let body_bytes = response.into_body().collect().await.unwrap().to_bytes();
+        let body_str = from_utf8(&body_bytes).unwrap();
+        assert!(
+            body_str.contains(r#"id="quote""#),
+            r#"Body does not contain id="quote": {body_str}"#,
+        );
+    }
 }
