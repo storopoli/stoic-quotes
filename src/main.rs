@@ -31,8 +31,8 @@ async fn main() -> Result<()> {
 
     let app = app();
 
-    // run our app with hyper, listening globally on port 443
-    let port = 443_u16;
+    // run our app with hyper, listening globally on port 3000
+    let port = 3000_u16;
     let addr = TcpListener::bind(format!("0.0.0.0:{port}")).await.unwrap();
     info!("router initialized, listening on port {:?}", port);
     serve(addr, app)
