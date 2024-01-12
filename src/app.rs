@@ -24,7 +24,7 @@ async fn handle_user_agent<T>(req: Request<T>) -> Response {
     }
 }
 
-/// Creates an [`Axum`] [`Router`] that only handles GET requests to
+/// Creates an Axum [`Router`] that only handles GET requests to
 /// `/` and `/quote`.
 pub fn app() -> Router {
     // Create a router
