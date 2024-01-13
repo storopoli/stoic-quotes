@@ -55,7 +55,7 @@ jobs:
             FLAGS="--target=${{ matrix.target }}"
             rustup target add "${{ matrix.target }}"
           fi
-          cargo build --release --locked $FLAGS
+          cargo build --release $FLAGS
       - name: Upload binary to release
         uses: svenstaro/upload-release-action@v2
         with:
