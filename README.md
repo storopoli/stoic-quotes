@@ -10,6 +10,7 @@ The whole app runs with [Rust](https://rust-lang.org) using
 - [askama](https://djc.github.io/askama/)
 - [htmx](https://htmx.org)
 - [tailwindcss](https://tailwindcss.com/)
+- [daisyui](https://daisyui.com)
 - [Satoshi Font](https://www.fontshare.com/fonts/satoshi)
 
 <div align="center">
