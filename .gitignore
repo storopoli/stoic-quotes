@@ -15,6 +15,3 @@ Cargo.lock
 # Node Soydev stuff
 node_modules
 package-lock.json
-
-# Tailwind
-assets/main.css
