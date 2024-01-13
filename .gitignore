@@ -9,3 +9,9 @@ target/
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
 
+# Node Soydev stuff
+node_modules
+package-lock.json
+
+# Tailwind
+assets/main.css

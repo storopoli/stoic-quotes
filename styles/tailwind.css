@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@1&display=swap");
+
+@layer base {
+    div {
+        font-family: "Satoshi", system-ui, sans-serif;
+    }
+}

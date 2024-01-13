@@ -2,7 +2,8 @@
 
 use crate::pages::{plain_quote, quote, root};
 use axum::{http::header::USER_AGENT, http::Request, response::Response, routing::get, Router};
-use tower_http::trace::TraceLayer;
+use std::{env::current_dir, path::PathBuf};
+use tower_http::{services::ServeDir, trace::TraceLayer};
 use tracing::info;
 
 /// Handles the User Agent header
@@ -29,11 +30,16 @@ async fn handle_user_agent<T>(req: Request<T>) -> Response {
 /// Creates an Axum [`Router`] that only handles GET requests to
 /// `/` and `/quote`.
 pub fn app() -> Router {
+    let assets_path: PathBuf = current_dir().unwrap();
     // Create a router
     info!("initializing router...");
     Router::new()
         .route("/", get(handle_user_agent))
         .route("/quote", get(quote))
+        .nest_service(
+            "/assets",
+            ServeDir::new(format!("{}/assets", assets_path.to_str().unwrap())),
+        )
         // We can still add middleware
         .layer(TraceLayer::new_for_http())
 }
