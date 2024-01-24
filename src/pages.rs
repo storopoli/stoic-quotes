@@ -64,6 +64,6 @@ pub async fn quote() -> Response {
 /// Returns a plain text random quote without any HTML.
 pub async fn plain_quote() -> Response {
     let Quote { text, author } = random_quote();
-    let formatted_quote: String = format!("\"{}\"\n - {}", text, author);
+    let formatted_quote: String = format!("{text}\n\n - {author}\n");
     Html(formatted_quote).into_response()
 }
