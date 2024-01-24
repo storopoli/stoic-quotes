@@ -1,962 +1,966 @@
 [
-    {
-        "text": "The best answer to anger is silence.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "The more we value things outside our control, the less control we have.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "How ridiculous and how strange to be surprised at anything which happens in life.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "You have power over your mind – not outside events. Realize this, and you will find strength.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "The best revenge is not to be like your enemy.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Accept the things to which fate binds you, and love the people with whom fate brings you together, but do so with all your heart.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Confine yourself to the present.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "When you arise in the morning, think of what a precious privilege it is to be alive – to breathe, to think, to enjoy, to love.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "You can commit injustice by doing nothing.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Waste no more time arguing about what a good man should be. Be one.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Each day provides its own gifts.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Give yourself a gift, the present moment.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "The only wealth which you will keep forever is the wealth you have given away.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Have I been made for this, to lie under the blankets and keep myself warm?",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Conceal a flaw, and the world will imagine the worst.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Life is neither good or evil, but only a place for good and evil.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "I cannot escape death, but at least I can escape the fear of it.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "How trivial the things we want so passionately are.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Settle on the type of person you want to be and stick to it, whether alone or in company.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Consider at what price you sell your integrity, but please, for God’s sake, don’t sell it cheap.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "We suffer more often in imagination than in reality.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Ignorance is the cause of fear.",
-        "author": "Seneca"
-    },
-    {
-        "text": "While we wait for life, life passes.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Life is long, if you know how to use it.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Hurry up and live.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Cease to hope and you will cease to fear.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Wealth is the slave of a wise man and the master of a fool.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Only time can heal what reason cannot.",
-        "author": "Seneca"
-    },
-    {
-        "text": "While we are postponing, life speeds by.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Life, if well lived, is long enough.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Hang on to your youthful enthusiasms, you will be able to use them better when you are older.",
-        "author": "Seneca"
-    },
-    {
-        "text": "He who is brave is free.",
-        "author": "Seneca"
-    },
-    {
-        "text": "It is a rough road that leads to the heights of greatness.",
-        "author": "Seneca"
-    },
-    {
-        "text": "It is more civilized to make fun of life than to bewail it.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Difficulty comes from our lack of confidence.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Life is very short and anxious for those who forget the past, neglect the present, and fear the future.",
-        "author": "Seneca"
-    },
-    {
-        "text": "What really ruins our character is the fact that none of us looks back over his life.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Religion is regarded by the common people as true, by the wise as false, and by rulers as useful.",
-        "author": "Seneca"
-    },
-    {
-        "text": "It does not matter how many books you have, but how good are the books which you have.",
-        "author": "Seneca"
-    },
-    {
-        "text": "When a person spends all his time in foreign travel, he ends by having many acquaintances, but no friends.",
-        "author": "Seneca"
-    },
-    {
-        "text": "For many men, the acquisition of wealth does not end their troubles, it only changes them.",
-        "author": "Seneca"
-    },
-    {
-        "text": "The greatest remedy for anger is delay.",
-        "author": "Seneca"
-    },
-    {
-        "text": "We have two ears and one mouth so that we can listen twice as much as we speak.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "No man is free who is not master of himself.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "\nMen are disturbed not by things, but by the view which they take of them.\n",
-        "author": "Epictetus"
-    },
-    {
-        "text": "It is difficulties that show what men are.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "\nMake the best use of what is in your power, and take the rest as it happens.\n",
-        "author": "Epictetus"
-    },
-    {
-        "text": "A ship should not ride on a single anchor, nor life on a single hope.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "No great thing is created suddenly.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Know, first, who you are, and then adorn yourself accordingly.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "It is the nature of the wise to resist pleasures, but the foolish to be a slave to them.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "First learn the meaning of what you say, and then speak.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "If you want something good, get it yourself.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "All the good are friends of one another.",
-        "author": "Zeno"
-    },
-    {
-        "text": "No loss should be more regrettable to us than losing our time, for it’s irretrievable.",
-        "author": "Zeno"
-    },
-    {
-        "text": "Extravagance is its own destroyer.",
-        "author": "Zeno"
-    },
-    {
-        "text": "Man conquers the world by conquering himself.",
-        "author": "Zeno"
-    },
-    {
-        "text": "Steel your sensibilities, so that life shall hurt you as little as possible.",
-        "author": "Zeno"
-    },
-    {
-        "text": "Better to trip with the feet than with the tongue",
-        "author": "Zeno"
-    },
-    {
-        "text": "A bad feeling is a commotion of the mind repugnant to reason, and against nature.",
-        "author": "Zeno"
-    },
-    {
-        "text": "We begin to lose our hesitation to do immoral things when we lose our hesitation to speak of them.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "Humanity must seek what is NOT simple and obvious using the simple and obvious.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "Since every man dies, it is better to die with distinction than to live long.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "Only by exhibiting actions in harmony with the sound words which he has received will anyone be helped by philosophy.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "Thus whoever destroys human marriage destroys the home, the city-the whole human race.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "He with the most who is content with the least.",
-        "author": "Diogenes"
-    },
-    {
-        "text": "The foundation of every state is the education of its youth.",
-        "author": "Diogenes"
-    },
-    {
-        "text": "Blushing is the color of virtue.",
-        "author": "Diogenes"
-    },
-    {
-        "text": "Dogs and philosophers do the greatest good and get the fewest rewards.",
-        "author": "Diogenes"
-    },
-    {
-        "text": "I am not an Athenian or a Greek, but a citizen of the world.",
-        "author": "Diogenes"
-    },
-    {
-        "text": "The mob is the mother of tyrants.",
-        "author": "Diogenes"
-    },
-    {
-        "text": "Poverty is a virtue which one can teach oneself.",
-        "author": "Diogenes"
-    },
-    {
-        "text": "It is not death that a man should fear, but he should fear never beginning to live.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "We cannot choose our external circumstances, but we can always choose how we respond to them.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.",
-        "author": "Seneca"
-    },
-    {
-        "text": "The best revenge is to be unlike him who performed the injustice.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "He who fears death will never do anything worth of a man who is alive.",
-        "author": "Seneca"
-    },
-    {
-        "text": "We suffer more often in imagination than in reality.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Men are disturbed not by things, but by the view which they take of them.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Waste no more time arguing about what a good man should be. Be one.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "It is the power of the mind to be unconquerable.",
-        "author": "Seneca"
-    },
-    {
-        "text": "First say to yourself what you would be; and then do what you have to do.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "We cannot choose our external circumstances, but we can always choose how we respond to them.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "No man is free who is not master of himself.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "It is impossible for a man to learn what he thinks he already knows.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "We are disturbed not by things, but by the views which we take of them.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "When you are offended at any man's fault, turn to yourself and study your own failings.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Difficulties are things that show a person what they are.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "First say to yourself what you would be; and then do what you have to do.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "We cannot step twice into the same river.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "All learning consists in turning words into things.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "It is not the consuming of food but the desire for food that hinders the philosopher.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "Exile is the time to live like a wise man.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "We should not abandon our training, but stand up to disaster and learn to confront it.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "It is possible to be a good man without anyone realizing it. Remember that the gods, not other people, will reward us.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "Philosophy needs no special time or place or circumstances in which to practice it.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "We will be invincible if we enter the fight armed with proper training.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "Virtue is not simply theoretical knowledge, but it is practical application as well.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "If one accomplishes some good though with toil, the toil passes, but the good remains.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "One should avoid seeking [luxury]… for what one seeks, one is enslaved to.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "We are born with a desire for our own good.",
-        "author": "Musonius Rufus"
-    },
-    {
-        "text": "True happiness is... to enjoy the present, without anxious dependence upon the future.",
-        "author": "Seneca"
-    },
-    {
-        "text": "He suffers more than necessary, who suffers before it is necessary.",
-        "author": "Seneca"
-    },
-    {
-        "text": "It is not the man who has too little, but the man who craves more, that is poor.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Difficulties strengthen the mind, as labor does the body.",
-        "author": "Seneca"
-    },
-    {
-        "text": "We suffer more often in imagination than in reality.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Anger, if not restrained, is frequently more hurtful to us than the injury that provokes it.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Life is long if you know how to use it.",
-        "author": "Seneca"
-    },
-    {
-        "text": "He who fears death will never do anything worth of a man who is alive.",
-        "author": "Seneca"
-    },
-    {
-        "text": "The greatest obstacle to living is expectancy, which depends upon the morrow and wastes today.",
-        "author": "Seneca"
-    },
-    {
-        "text": "True wisdom comes to each of us when we realize how little we understand about life, ourselves, and the world around us.",
-        "author": "Seneca"
-    },
-    {
-        "text": "We cannot choose our external circumstances, but we can always choose how we respond to them.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Wealth consists not in having great possessions, but in having few wants.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Only the educated are free.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "It's not what happens to you, but how you react to it that matters.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "First say to yourself what you would be; and then do what you have to do.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Men are disturbed not by things, but by the view which they take of them.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "If you want to improve, be content to be thought foolish and stupid.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Man is not worried by real problems so much as by his imagined anxieties about real problems.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "You have power over your mind - not outside events. Realize this, and you will find strength.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Time is a sort of river of passing events, and strong is its current; no sooner is a thing brought to sight than it is swept by and another takes its place, and this too will be swept away.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "He who lives in harmony with himself lives in harmony with the universe.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Our life is what our thoughts make it.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "That we are not given complete control is to our mutual advantage, so that we might learn to live in a community of equals. To get angry at something means you’ve forgotten: We always die, and we’re all equal at birth and death.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Death smiles at us all, but all a man can do is smile back.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "The best revenge is to be unlike him who performed the injustice.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "It is not death that a man should fear, but he should fear never beginning to live.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Well-being is realized by small steps, but is truly no small thing.",
-        "author": "Zeno"
-    },
-    {
-        "text": "Happiness is a good flow of life.",
-        "author": "Zeno"
-    },
-    {
-        "text": "Man conquers the world by conquering himself.",
-        "author": "Zeno"
-    },
-    {
-        "text": "We have two ears and one mouth, so we should listen more than we say.",
-        "author": "Zeno"
-    },
-    {
-        "text": "We should not spoil what we have by desiring what we have not; but remember that what we now have was once among the things we only hoped for.",
-        "author": "Zeno"
-    },
-    {
-        "text": "He who is greedy is always in want.",
-        "author": "Zeno"
-    },
-    {
-        "text": "Fate is the endless chain of causation, whereby things are; the reason or formula by which the world goes on.",
-        "author": "Zeno"
-    },
-    {
-        "text": "Our individual life is a part of the entire cosmos, governed by the universal reason, logos.",
-        "author": "Zeno"
-    },
-    {
-        "text": "Nature must be followed.",
-        "author": "Zeno"
-    },
-    {
-        "text": "Man’s proper work is the practice of the virtues, which alone produce happiness.",
-        "author": "Zeno"
-    },
-    {
-        "text": "True happiness is... to enjoy the present, without anxious dependence upon the future.",
-        "author": "Seneca"
-    },
-    {
-        "text": "We cannot choose our external circumstances, but we can always choose how we respond to them.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "The happiness of your life depends upon the quality of your thoughts.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "He suffers more than necessary, who suffers before it is necessary.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "When you arise in the morning, think of what a precious privilege it is to be alive—to breathe, to think, to enjoy, to love.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "It's not that we have a short time to live, but that we waste much of it.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Men are disturbed not by things, but by the views which they take of things.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Difficulties strengthen the mind, as labor does the body.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Wherever there is a human being, there is an opportunity for kindness.",
-        "author": "Seneca"
-    },
-    {
-        "text": "It is not the man who has too little, but the man who craves more, that is poor.",
-        "author": "Seneca"
-    },
-    {
-        "text": "He who fears death will never do anything worth of a man who is alive.",
-        "author": "Seneca"
-    },
-    {
-        "text": "What is not good for the swarm is not good for the bee.‍",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Kindness is invincible, but only when it’s sincere, with no hypocrisy or faking.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Love is born into every human being; it calls back the halves of our original nature together.",
-        "author": "Plato"
-    },
-    {
-        "text": "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "The key is to keep company only with people who uplift you, whose presence calls forth your best.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "True happiness is... to enjoy the present, without anxious dependence upon the future.",
-        "author": "Seneca"
-    },
-    {
-        "text": "One of the most beautiful qualities of true friendship is to understand and be understood.",
-        "author": "Seneca"
-    },
-    {
-        "text": "He who is brave is free.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Virtue is nothing else than right reason.",
-        "author": "Seneca"
-    },
-    {
-        "text": "It's not that we have a short time to live, but that we waste much of it.",
-        "author": "Seneca"
-    },
-    {
-        "text": "We suffer more often in imagination than in reality.",
-        "author": "Seneca"
-    },
-    {
-        "text": "A gem cannot be polished without friction, nor a man perfected without trials.",
-        "author": "Seneca"
-    },
-    {
-        "text": "To enjoy life, we must touch much of it lightly.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Associate with people who are likely to improve you.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Our plans miscarry because they have no aim. When a man does not know what harbor he is making for, no wind is the right wind.",
-        "author": "Seneca"
-    },
-    {
-        "text": "We cannot control the external events around us; we can control ourselves. It is not things that trouble us, but our judgments about things.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Circumstances do not make the man; they merely reveal him to himself.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "If you want to improve, be content to be thought foolish and stupid.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Freedom is the right to live as we wish.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Men are disturbed not by things, but by the views which they take of things.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "It's not what happens to you, but how you react to it that matters.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "We have two ears and one mouth so that we can listen twice as much as we speak.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "We cannot choose our external circumstances, but we can always choose how we respond to them.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "It takes more than just a good-looking body. You’ve got to have the heart and soul to go with it.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Man is not worried by real problems so much as by his imagined anxieties about real problems.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "You have power over your mind—not outside events. Realize this, and you will find strength.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Accept the things to which fate binds you, and love the people with whom fate brings you together, but do so with all your heart.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "The happiness of your life depends upon the quality of your thoughts.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "The obstacle is the way.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "When you arise in the morning, think of what a precious privilege it is to be alive—to breathe, to think, to enjoy, to love.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "If it is not right, do not do it; if it is not true, do not say it.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Waste no more time arguing what a good man should be. Be one.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Nowhere can man find a quieter or more untroubled retreat than in his own soul.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "We cannot control our external circumstances, but we can always control how we respond to them.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "First say to yourself what you would be; and then do what you have to do.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "We have two ears and one mouth so that we can listen twice as much as we speak.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "If you want to improve, be content to be thought foolish and stupid.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Only the educated are free.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "It is not what happens to you, but how you react to it that matters.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Don't explain your philosophy. Embody it.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "If you seek truth you will not seek victory by dishonorable means, and if you find truth you will become invincible.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Love is not about possession, love is about appreciation.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Associate with those who will make a better person of you.",
-        "author": "Seneca"
-    },
-    {
-        "text": "We cannot choose our external circumstances, but we can always choose how we respond to them.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "To love is to wish well for someone and seek their good.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Wherever there is a human being, there is an opportunity for kindness.",
-        "author": "Seneca"
-    },
-    {
-        "text": "We have two ears and one mouth so that we can listen twice as much as we speak.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Anger, if not restrained, is frequently more destructive than the injury that provoked it.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Accept the things to which fate binds you, and love the people with whom fate brings you together, but do so with all your heart.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Difficulties strengthen the mind, as labor does the body.",
-        "author": "Seneca"
-    },
-    {
-        "text": "First say to yourself what you would be; and then do what you have to do.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Waste no more time arguing what a good man should be. Be one.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "It is not because things are difficult that we do not dare; it is because we do not dare that things are difficult.",
-        "author": "Seneca"
-    },
-    {
-        "text": "The key is to keep company only with people who uplift you, whose presence calls forth your best.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "If you are distressed by anything external, the pain is not due to the thing itself, but to your estimate of it; and this you have the power to revoke at any moment.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "It does not matter what you bear, but how you bear it.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Only the educated are free.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "He who fears he will suffer, already suffers because he fears.",
-        "author": "Seneca"
-    },
-    {
-        "text": "The happiness of your life depends upon the quality of your thoughts.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "If you want to improve, be content to be thought foolish and stupid.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "A gem cannot be polished without friction, nor a man perfected without trials.",
-        "author": "Seneca"
-    },
-    {
-        "text": "The greatest blessings of mankind are within us and within our reach. A wise man is content with his lot, whatever it may be, without wishing for what he has not.",
-        "author": "Seneca"
-    },
-    {
-        "text": "When you arise in the morning, think of what a precious privilege it is to be alive—to breathe, to think, to enjoy, to love.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "Happiness and freedom begin with a clear understanding of one principle: Some things are within our control, and some things are not.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "It is not what happens to you, but how you react to it that matters.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "We cannot control the impressions others form about us, and the effort to do so only debases our character.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Life is very short and anxious for those who forget the past, neglect the present, and fear the future.",
-        "author": "Seneca"
-    },
-    {
-        "text": "If you really want to escape the things that harass you, what you're needing is not to be in a different place but to be a different person.",
-        "author": "Seneca"
-    },
-    {
-        "text": "If you seek truth you will not seek victory by dishonorable means, and if you find truth you will become invincible.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "You have power over your mind - not outside events. Realize this, and you will find strength.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "We cannot choose our external circumstances, but we can always choose how we respond to them.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "True happiness is... to enjoy the present, without anxious dependence upon the future.",
-        "author": "Seneca"
-    },
-    {
-        "text": "The key is to keep company only with people who uplift you, whose presence calls forth your best",
-        "author": "Epictetus"
-    },
-    {
-        "text": "Difficulties strengthen the mind, as labor does the body.",
-        "author": "Seneca"
-    },
-    {
-        "text": "The obstacle is the way.",
-        "author": "Marcus Aurelius"
-    },
-    {
-        "text": "We are more often frightened than hurt; and we suffer more from imagination than from reality.",
-        "author": "Seneca"
-    },
-    {
-        "text": "We have two ears and one mouth so that we can listen twice as much as we speak.",
-        "author": "Epictetus"
-    },
-    {
-        "text": "It is not the man who has too little, but the man who craves more, that is poor.",
-        "author": "Seneca"
-    },
-    {
-        "text": "Don't explain your philosophy. Embody it.",
-        "author": "Epictetus"
-    }
+  {
+    "text": "The best answer to anger is silence.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "The more we value things outside our control, the less control we have.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "How ridiculous and how strange to be surprised at anything which happens in life.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "You have power over your mind – not outside events. Realize this, and you will find strength.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "The best revenge is not to be like your enemy.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Accept the things to which fate binds you, and love the people with whom fate brings you together, but do so with all your heart.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Confine yourself to the present.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "When you arise in the morning, think of what a precious privilege it is to be alive – to breathe, to think, to enjoy, to love.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "You can commit injustice by doing nothing.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Waste no more time arguing about what a good man should be. Be one.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Each day provides its own gifts.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Give yourself a gift, the present moment.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "The only wealth which you will keep forever is the wealth you have given away.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Have I been made for this, to lie under the blankets and keep myself warm?",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Conceal a flaw, and the world will imagine the worst.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Life is neither good or evil, but only a place for good and evil.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "I cannot escape death, but at least I can escape the fear of it.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "How trivial the things we want so passionately are.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Settle on the type of person you want to be and stick to it, whether alone or in company.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Consider at what price you sell your integrity, but please, for God’s sake, don’t sell it cheap.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "We suffer more often in imagination than in reality.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Ignorance is the cause of fear.",
+    "author": "Seneca"
+  },
+  {
+    "text": "While we wait for life, life passes.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Life is long, if you know how to use it.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Hurry up and live.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Cease to hope and you will cease to fear.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Wealth is the slave of a wise man and the master of a fool.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Only time can heal what reason cannot.",
+    "author": "Seneca"
+  },
+  {
+    "text": "While we are postponing, life speeds by.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Life, if well lived, is long enough.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Hang on to your youthful enthusiasms, you will be able to use them better when you are older.",
+    "author": "Seneca"
+  },
+  {
+    "text": "He who is brave is free.",
+    "author": "Seneca"
+  },
+  {
+    "text": "It is a rough road that leads to the heights of greatness.",
+    "author": "Seneca"
+  },
+  {
+    "text": "It is more civilized to make fun of life than to bewail it.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Difficulty comes from our lack of confidence.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Life is very short and anxious for those who forget the past, neglect the present, and fear the future.",
+    "author": "Seneca"
+  },
+  {
+    "text": "What really ruins our character is the fact that none of us looks back over his life.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Religion is regarded by the common people as true, by the wise as false, and by rulers as useful.",
+    "author": "Seneca"
+  },
+  {
+    "text": "It does not matter how many books you have, but how good are the books which you have.",
+    "author": "Seneca"
+  },
+  {
+    "text": "When a person spends all his time in foreign travel, he ends by having many acquaintances, but no friends.",
+    "author": "Seneca"
+  },
+  {
+    "text": "For many men, the acquisition of wealth does not end their troubles, it only changes them.",
+    "author": "Seneca"
+  },
+  {
+    "text": "The greatest remedy for anger is delay.",
+    "author": "Seneca"
+  },
+  {
+    "text": "We have two ears and one mouth so that we can listen twice as much as we speak.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "No man is free who is not master of himself.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Men are disturbed not by things, but by the view which they take of them.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "It is difficulties that show what men are.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Make the best use of what is in your power, and take the rest as it happens.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "A ship should not ride on a single anchor, nor life on a single hope.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "No great thing is created suddenly.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Know, first, who you are, and then adorn yourself accordingly.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "It is the nature of the wise to resist pleasures, but the foolish to be a slave to them.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "First learn the meaning of what you say, and then speak.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "If you want something good, get it yourself.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "All the good are friends of one another.",
+    "author": "Zeno"
+  },
+  {
+    "text": "No loss should be more regrettable to us than losing our time, for it’s irretrievable.",
+    "author": "Zeno"
+  },
+  {
+    "text": "Extravagance is its own destroyer.",
+    "author": "Zeno"
+  },
+  {
+    "text": "Man conquers the world by conquering himself.",
+    "author": "Zeno"
+  },
+  {
+    "text": "Steel your sensibilities, so that life shall hurt you as little as possible.",
+    "author": "Zeno"
+  },
+  {
+    "text": "Better to trip with the feet than with the tongue",
+    "author": "Zeno"
+  },
+  {
+    "text": "A bad feeling is a commotion of the mind repugnant to reason, and against nature.",
+    "author": "Zeno"
+  },
+  {
+    "text": "We begin to lose our hesitation to do immoral things when we lose our hesitation to speak of them.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "Humanity must seek what is NOT simple and obvious using the simple and obvious.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "Since every man dies, it is better to die with distinction than to live long.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "Only by exhibiting actions in harmony with the sound words which he has received will anyone be helped by philosophy.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "Thus whoever destroys human marriage destroys the home, the city-the whole human race.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "He with the most who is content with the least.",
+    "author": "Diogenes"
+  },
+  {
+    "text": "The foundation of every state is the education of its youth.",
+    "author": "Diogenes"
+  },
+  {
+    "text": "Blushing is the color of virtue.",
+    "author": "Diogenes"
+  },
+  {
+    "text": "Dogs and philosophers do the greatest good and get the fewest rewards.",
+    "author": "Diogenes"
+  },
+  {
+    "text": "I am not an Athenian or a Greek, but a citizen of the world.",
+    "author": "Diogenes"
+  },
+  {
+    "text": "The mob is the mother of tyrants.",
+    "author": "Diogenes"
+  },
+  {
+    "text": "Poverty is a virtue which one can teach oneself.",
+    "author": "Diogenes"
+  },
+  {
+    "text": "It is not death that a man should fear, but he should fear never beginning to live.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "We cannot choose our external circumstances, but we can always choose how we respond to them.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.",
+    "author": "Seneca"
+  },
+  {
+    "text": "The best revenge is to be unlike him who performed the injustice.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "He who fears death will never do anything worth of a man who is alive.",
+    "author": "Seneca"
+  },
+  {
+    "text": "We suffer more often in imagination than in reality.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Men are disturbed not by things, but by the view which they take of them.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Waste no more time arguing about what a good man should be. Be one.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "It is the power of the mind to be unconquerable.",
+    "author": "Seneca"
+  },
+  {
+    "text": "First say to yourself what you would be; and then do what you have to do.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "We cannot choose our external circumstances, but we can always choose how we respond to them.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "No man is free who is not master of himself.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "It is impossible for a man to learn what he thinks he already knows.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "We are disturbed not by things, but by the views which we take of them.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "When you are offended at any man's fault, turn to yourself and study your own failings.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Difficulties are things that show a person what they are.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "First say to yourself what you would be; and then do what you have to do.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "We cannot step twice into the same river.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "All learning consists in turning words into things.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "It is not the consuming of food but the desire for food that hinders the philosopher.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "Exile is the time to live like a wise man.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "We should not abandon our training, but stand up to disaster and learn to confront it.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "It is possible to be a good man without anyone realizing it. Remember that the gods, not other people, will reward us.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "Philosophy needs no special time or place or circumstances in which to practice it.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "We will be invincible if we enter the fight armed with proper training.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "Virtue is not simply theoretical knowledge, but it is practical application as well.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "If one accomplishes some good though with toil, the toil passes, but the good remains.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "One should avoid seeking [luxury]… for what one seeks, one is enslaved to.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "We are born with a desire for our own good.",
+    "author": "Musonius Rufus"
+  },
+  {
+    "text": "True happiness is... to enjoy the present, without anxious dependence upon the future.",
+    "author": "Seneca"
+  },
+  {
+    "text": "He suffers more than necessary, who suffers before it is necessary.",
+    "author": "Seneca"
+  },
+  {
+    "text": "It is not the man who has too little, but the man who craves more, that is poor.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Difficulties strengthen the mind, as labor does the body.",
+    "author": "Seneca"
+  },
+  {
+    "text": "We suffer more often in imagination than in reality.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Anger, if not restrained, is frequently more hurtful to us than the injury that provokes it.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Life is long if you know how to use it.",
+    "author": "Seneca"
+  },
+  {
+    "text": "He who fears death will never do anything worth of a man who is alive.",
+    "author": "Seneca"
+  },
+  {
+    "text": "The greatest obstacle to living is expectancy, which depends upon the morrow and wastes today.",
+    "author": "Seneca"
+  },
+  {
+    "text": "True wisdom comes to each of us when we realize how little we understand about life, ourselves, and the world around us.",
+    "author": "Seneca"
+  },
+  {
+    "text": "We cannot choose our external circumstances, but we can always choose how we respond to them.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Wealth consists not in having great possessions, but in having few wants.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Only the educated are free.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "It's not what happens to you, but how you react to it that matters.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "First say to yourself what you would be; and then do what you have to do.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Men are disturbed not by things, but by the view which they take of them.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "If you want to improve, be content to be thought foolish and stupid.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Man is not worried by real problems so much as by his imagined anxieties about real problems.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "You have power over your mind - not outside events. Realize this, and you will find strength.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Time is a sort of river of passing events, and strong is its current; no sooner is a thing brought to sight than it is swept by and another takes its place, and this too will be swept away.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "He who lives in harmony with himself lives in harmony with the universe.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Our life is what our thoughts make it.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "That we are not given complete control is to our mutual advantage, so that we might learn to live in a community of equals. To get angry at something means you’ve forgotten: We always die, and we’re all equal at birth and death.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Death smiles at us all, but all a man can do is smile back.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "The best revenge is to be unlike him who performed the injustice.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "It is not death that a man should fear, but he should fear never beginning to live.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Well-being is realized by small steps, but is truly no small thing.",
+    "author": "Zeno"
+  },
+  {
+    "text": "Happiness is a good flow of life.",
+    "author": "Zeno"
+  },
+  {
+    "text": "Man conquers the world by conquering himself.",
+    "author": "Zeno"
+  },
+  {
+    "text": "We have two ears and one mouth, so we should listen more than we say.",
+    "author": "Zeno"
+  },
+  {
+    "text": "We should not spoil what we have by desiring what we have not; but remember that what we now have was once among the things we only hoped for.",
+    "author": "Zeno"
+  },
+  {
+    "text": "He who is greedy is always in want.",
+    "author": "Zeno"
+  },
+  {
+    "text": "Fate is the endless chain of causation, whereby things are; the reason or formula by which the world goes on.",
+    "author": "Zeno"
+  },
+  {
+    "text": "Our individual life is a part of the entire cosmos, governed by the universal reason, logos.",
+    "author": "Zeno"
+  },
+  {
+    "text": "Nature must be followed.",
+    "author": "Zeno"
+  },
+  {
+    "text": "Man’s proper work is the practice of the virtues, which alone produce happiness.",
+    "author": "Zeno"
+  },
+  {
+    "text": "True happiness is... to enjoy the present, without anxious dependence upon the future.",
+    "author": "Seneca"
+  },
+  {
+    "text": "We cannot choose our external circumstances, but we can always choose how we respond to them.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "The happiness of your life depends upon the quality of your thoughts.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "He suffers more than necessary, who suffers before it is necessary.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "When you arise in the morning, think of what a precious privilege it is to be alive—to breathe, to think, to enjoy, to love.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "It's not that we have a short time to live, but that we waste much of it.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Men are disturbed not by things, but by the views which they take of things.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Difficulties strengthen the mind, as labor does the body.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Wherever there is a human being, there is an opportunity for kindness.",
+    "author": "Seneca"
+  },
+  {
+    "text": "It is not the man who has too little, but the man who craves more, that is poor.",
+    "author": "Seneca"
+  },
+  {
+    "text": "He who fears death will never do anything worth of a man who is alive.",
+    "author": "Seneca"
+  },
+  {
+    "text": "What is not good for the swarm is not good for the bee.‍",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Kindness is invincible, but only when it’s sincere, with no hypocrisy or faking.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Love is born into every human being; it calls back the halves of our original nature together.",
+    "author": "Plato"
+  },
+  {
+    "text": "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "The key is to keep company only with people who uplift you, whose presence calls forth your best.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "True happiness is... to enjoy the present, without anxious dependence upon the future.",
+    "author": "Seneca"
+  },
+  {
+    "text": "One of the most beautiful qualities of true friendship is to understand and be understood.",
+    "author": "Seneca"
+  },
+  {
+    "text": "He who is brave is free.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Virtue is nothing else than right reason.",
+    "author": "Seneca"
+  },
+  {
+    "text": "It's not that we have a short time to live, but that we waste much of it.",
+    "author": "Seneca"
+  },
+  {
+    "text": "We suffer more often in imagination than in reality.",
+    "author": "Seneca"
+  },
+  {
+    "text": "A gem cannot be polished without friction, nor a man perfected without trials.",
+    "author": "Seneca"
+  },
+  {
+    "text": "To enjoy life, we must touch much of it lightly.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Associate with people who are likely to improve you.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Our plans miscarry because they have no aim. When a man does not know what harbor he is making for, no wind is the right wind.",
+    "author": "Seneca"
+  },
+  {
+    "text": "We cannot control the external events around us; we can control ourselves. It is not things that trouble us, but our judgments about things.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Circumstances do not make the man; they merely reveal him to himself.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "If you want to improve, be content to be thought foolish and stupid.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Freedom is the right to live as we wish.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Men are disturbed not by things, but by the views which they take of things.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "It's not what happens to you, but how you react to it that matters.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "We have two ears and one mouth so that we can listen twice as much as we speak.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "We cannot choose our external circumstances, but we can always choose how we respond to them.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "It takes more than just a good-looking body. You’ve got to have the heart and soul to go with it.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Man is not worried by real problems so much as by his imagined anxieties about real problems.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "You have power over your mind—not outside events. Realize this, and you will find strength.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Accept the things to which fate binds you, and love the people with whom fate brings you together, but do so with all your heart.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "The happiness of your life depends upon the quality of your thoughts.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "The obstacle is the way.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "When you arise in the morning, think of what a precious privilege it is to be alive—to breathe, to think, to enjoy, to love.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "If it is not right, do not do it; if it is not true, do not say it.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Waste no more time arguing what a good man should be. Be one.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Nowhere can man find a quieter or more untroubled retreat than in his own soul.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "We cannot control our external circumstances, but we can always control how we respond to them.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "First say to yourself what you would be; and then do what you have to do.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "We have two ears and one mouth so that we can listen twice as much as we speak.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "If you want to improve, be content to be thought foolish and stupid.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Only the educated are free.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "It is not what happens to you, but how you react to it that matters.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Don't explain your philosophy. Embody it.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "If you seek truth you will not seek victory by dishonorable means, and if you find truth you will become invincible.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Love is not about possession, love is about appreciation.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Associate with those who will make a better person of you.",
+    "author": "Seneca"
+  },
+  {
+    "text": "We cannot choose our external circumstances, but we can always choose how we respond to them.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "To love is to wish well for someone and seek their good.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Wherever there is a human being, there is an opportunity for kindness.",
+    "author": "Seneca"
+  },
+  {
+    "text": "We have two ears and one mouth so that we can listen twice as much as we speak.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Anger, if not restrained, is frequently more destructive than the injury that provoked it.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Accept the things to which fate binds you, and love the people with whom fate brings you together, but do so with all your heart.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Difficulties strengthen the mind, as labor does the body.",
+    "author": "Seneca"
+  },
+  {
+    "text": "First say to yourself what you would be; and then do what you have to do.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Waste no more time arguing what a good man should be. Be one.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "It is not because things are difficult that we do not dare; it is because we do not dare that things are difficult.",
+    "author": "Seneca"
+  },
+  {
+    "text": "The key is to keep company only with people who uplift you, whose presence calls forth your best.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "If you are distressed by anything external, the pain is not due to the thing itself, but to your estimate of it; and this you have the power to revoke at any moment.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "It does not matter what you bear, but how you bear it.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Only the educated are free.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "He who fears he will suffer, already suffers because he fears.",
+    "author": "Seneca"
+  },
+  {
+    "text": "The happiness of your life depends upon the quality of your thoughts.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "If you want to improve, be content to be thought foolish and stupid.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "A gem cannot be polished without friction, nor a man perfected without trials.",
+    "author": "Seneca"
+  },
+  {
+    "text": "The greatest blessings of mankind are within us and within our reach. A wise man is content with his lot, whatever it may be, without wishing for what he has not.",
+    "author": "Seneca"
+  },
+  {
+    "text": "When you arise in the morning, think of what a precious privilege it is to be alive—to breathe, to think, to enjoy, to love.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Happiness and freedom begin with a clear understanding of one principle: Some things are within our control, and some things are not.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "It is not what happens to you, but how you react to it that matters.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "We cannot control the impressions others form about us, and the effort to do so only debases our character.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Life is very short and anxious for those who forget the past, neglect the present, and fear the future.",
+    "author": "Seneca"
+  },
+  {
+    "text": "If you really want to escape the things that harass you, what you're needing is not to be in a different place but to be a different person.",
+    "author": "Seneca"
+  },
+  {
+    "text": "If you seek truth you will not seek victory by dishonorable means, and if you find truth you will become invincible.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "You have power over your mind - not outside events. Realize this, and you will find strength.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "We cannot choose our external circumstances, but we can always choose how we respond to them.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "True happiness is... to enjoy the present, without anxious dependence upon the future.",
+    "author": "Seneca"
+  },
+  {
+    "text": "The key is to keep company only with people who uplift you, whose presence calls forth your best",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Difficulties strengthen the mind, as labor does the body.",
+    "author": "Seneca"
+  },
+  {
+    "text": "The obstacle is the way.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "We are more often frightened than hurt; and we suffer more from imagination than from reality.",
+    "author": "Seneca"
+  },
+  {
+    "text": "We have two ears and one mouth so that we can listen twice as much as we speak.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "It is not the man who has too little, but the man who craves more, that is poor.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Don't explain your philosophy. Embody it.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "If anyone tells you that such a person speaks ill of you, don’t make excuses about what is said of you, but answer: \"He does not know my other faults, else he would not have mentioned only these.\"",
+    "author": "Epictetus"
+  }
 ]
