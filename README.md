@@ -37,7 +37,7 @@ $ wget -qO- stoicquotes.io
 "It is better to be despised for simplicity than to suffer agonies from everlasting pretense."
  - Seneca
 
-$ curl stoicquotes.io
+$ curl -L stoicquotes.io
 "It is better to be despised for simplicity than to suffer agonies from everlasting pretense."
  - Seneca
 ```
