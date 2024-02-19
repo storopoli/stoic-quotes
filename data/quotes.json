@@ -24,15 +24,7 @@
     "author": "Zeno"
   },
   {
-    "text": "Anger, if not restrained, is frequently more destructive than the injury that provoked it.",
-    "author": "Seneca"
-  },
-  {
     "text": "Anger, if not restrained, is frequently more hurtful to us than the injury that provokes it.",
-    "author": "Seneca"
-  },
-  {
-    "text": "Associate with people who are likely to improve you.",
     "author": "Seneca"
   },
   {
@@ -280,10 +272,6 @@
     "author": "Seneca"
   },
   {
-    "text": "It is not because things are difficult that we do not dare; it is because we do not dare that things are difficult.",
-    "author": "Seneca"
-  },
-  {
     "text": "It is not death that a man should fear, but he should fear never beginning to live.",
     "author": "Marcus Aurelius"
   },
@@ -332,10 +320,6 @@
     "author": "Epictetus"
   },
   {
-    "text": "Life is long if you know how to use it.",
-    "author": "Seneca"
-  },
-  {
     "text": "Life is long, if you know how to use it.",
     "author": "Seneca"
   },
@@ -368,20 +352,8 @@
     "author": "Zeno"
   },
   {
-    "text": "Man is not worried by real problems so much as by his imagined anxieties about real problems.",
-    "author": "Epictetus"
-  },
-  {
     "text": "Man’s proper work is the practice of the virtues, which alone produce happiness.",
     "author": "Zeno"
-  },
-  {
-    "text": "Men are disturbed not by things, but by the view which they take of them.",
-    "author": "Epictetus"
-  },
-  {
-    "text": "Men are disturbed not by things, but by the views which they take of things.",
-    "author": "Epictetus"
   },
   {
     "text": "Nature must be followed.",
@@ -412,7 +384,7 @@
     "author": "Seneca"
   },
   {
-    "text": "One should avoid seeking [luxury]… for what one seeks, one is enslaved to.",
+    "text": "One should avoid seeking luxury for what one seeks, one is enslaved to.",
     "author": "Musonius Rufus"
   },
   {
@@ -476,10 +448,6 @@
     "author": "Marcus Aurelius"
   },
   {
-    "text": "The best revenge is to be unlike him who performed the injustice.",
-    "author": "Marcus Aurelius"
-  },
-  {
     "text": "The foundation of every state is the education of its youth.",
     "author": "Diogenes"
   },
@@ -498,10 +466,6 @@
   {
     "text": "The happiness of your life depends upon the quality of your thoughts.",
     "author": "Marcus Aurelius"
-  },
-  {
-    "text": "The key is to keep company only with people who uplift you, whose presence calls forth your best",
-    "author": "Epictetus"
   },
   {
     "text": "The key is to keep company only with people who uplift you, whose presence calls forth your best.",
@@ -560,10 +524,6 @@
     "author": "Seneca"
   },
   {
-    "text": "Waste no more time arguing about what a good man should be. Be one.",
-    "author": "Marcus Aurelius"
-  },
-  {
     "text": "Waste no more time arguing what a good man should be. Be one.",
     "author": "Marcus Aurelius"
   },
@@ -588,10 +548,6 @@
     "author": "Epictetus"
   },
   {
-    "text": "We cannot control our external circumstances, but we can always control how we respond to them.",
-    "author": "Epictetus"
-  },
-  {
     "text": "We cannot control the external events around us; we can control ourselves. It is not things that trouble us, but our judgments about things.",
     "author": "Epictetus"
   },
@@ -606,10 +562,6 @@
   {
     "text": "We have two ears and one mouth so that we can listen twice as much as we speak.",
     "author": "Epictetus"
-  },
-  {
-    "text": "We have two ears and one mouth, so we should listen more than we say.",
-    "author": "Zeno"
   },
   {
     "text": "We should not abandon our training, but stand up to disaster and learn to confront it.",
@@ -660,15 +612,7 @@
     "author": "Marcus Aurelius"
   },
   {
-    "text": "When you arise in the morning, think of what a precious privilege it is to be alive—to breathe, to think, to enjoy, to love.",
-    "author": "Marcus Aurelius"
-  },
-  {
     "text": "Wherever there is a human being, there is an opportunity for kindness.",
-    "author": "Seneca"
-  },
-  {
-    "text": "While we are postponing, life speeds by.",
     "author": "Seneca"
   },
   {
@@ -684,11 +628,83 @@
     "author": "Marcus Aurelius"
   },
   {
-    "text": "You have power over your mind – not outside events. Realize this, and you will find strength.",
+    "text": "Seek not the good in external things; seek it in yourselves.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Small-minded people blame others. Average people blame themselves. The wise see all blame as foolishness.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "We are not disturbed by what happens to us, but by our thoughts about what happens to us.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Men are not afraid of things, but of how they view them.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "If someone speaks badly of you, do not defend yourself against the accusations, but reply; \"you obviously don't know about my other vices, otherwise you would have mentioned these as well.\"",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Difficulty shows what men are.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Your happiness depends on three things, all of which are within your power: your will, your ideas concerning the events in which you are involved, and the use you make of your ideas.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "You become what you give your attention to.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "No man is free until he is a master of himself.",
+    "author": "Epictetus"
+  },
+  {
+    "text": "Luck is what happens when preparation meets opportunity.",
+    "author": "Seneca"
+  },
+  {
+    "text": "If a man knows not to which port he sails, no wind is favorable.",
+    "author": "Seneca"
+  },
+  {
+    "text": "As long as you live, keep learning how to live.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Often a very old man has no other proof of his long life than his age.",
+    "author": "Seneca"
+  },
+  {
+    "text": "To be everywhere is to be nowhere.",
+    "author": "Seneca"
+  },
+  {
+    "text": "Read good books many times, rather than many books.",
+    "author": "Seneca"
+  },
+  {
+    "text": "The impediment to action advances action. What stands in the way becomes the way.",
     "author": "Marcus Aurelius"
   },
   {
-    "text": "You have power over your mind—not outside events. Realize this, and you will find strength.",
+    "text": "Begin the morning by saying to thyself, I shall meet with the busybody, the ungrateful, arrogant, deceitful, envious, unsocial. All these things happen to them by reason of their ignorance of what is good and evil.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "Today I escaped from anxiety. Or no, I discarded it, because it was within me, in my own perceptions—not outside.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "To be like the rock that the waves keep crashing over. It stands unmoved and the raging of the sea falls still around it.",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "text": "The best revenge is not to be like that.",
     "author": "Marcus Aurelius"
   }
 ]
