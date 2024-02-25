@@ -1,273 +1,46 @@
-//! Module that has functions that handles the Axum [`Router`].
+//! Module that has functions and components that handles the rendering of
+//! the whole app.
 
-use crate::pages::{plain_quote, quote, root};
-use axum::{http::header::USER_AGENT, http::Request, response::IntoResponse, routing::get, Router};
-use std::{env::current_dir, net::SocketAddr, path::PathBuf};
-use tower_http::{services::ServeDir, trace::TraceLayer};
-use tracing::info;
+use dioxus::prelude::*;
 
-/// Handles the User Agent header
-/// If the user agent is `curl` or `wget`,
-/// return a plain quote.
-/// Otherwise, return the root page.
-async fn handle_user_agent<T>(req: Request<T>) -> impl IntoResponse {
-    let peer_addr = req
-        .extensions()
-        .get::<SocketAddr>()
-        .map(ToString::to_string)
-        .unwrap_or_else(|| "unknown".to_string());
-    let header = Request::headers(&req);
-    let user_agent: String = if let Some(user_agent) = header.get(USER_AGENT) {
-        user_agent.clone().to_str().unwrap().to_string()
-    } else {
-        "blank".to_string()
-    };
-
-    info!("Request from {peer_addr} with User-Agent: {user_agent}");
-
-    if user_agent.contains("curl") || user_agent.contains("Wget") {
-        plain_quote().await.into_response()
-    } else {
-        root().await.into_response()
-    }
-}
+use crate::component::{Button, Quote};
+use crate::data::random_quote;
 
 /// Creates an Axum [`Router`] that only handles GET requests to
 /// `/` and `/quote`.
-pub fn app() -> Router {
-    let assets_path: PathBuf = current_dir().unwrap();
-    // Create a router
-    info!("initializing router...");
-    Router::new()
-        .route("/", get(handle_user_agent))
-        .route("/quote", get(quote))
-        .nest_service(
-            "/assets",
-            ServeDir::new(format!("{}/assets", assets_path.to_str().unwrap())),
-        )
-        // We can still add middleware
-        .layer(TraceLayer::new_for_http())
-}
+#[component]
+pub fn App(cx: Scope) -> Element {
+    use_shared_state_provider(cx, random_quote);
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use axum::{
-        body::Body,
-        http::{Request, StatusCode},
-    };
-    use http_body_util::BodyExt; // for `collect`
-    use std::str::from_utf8;
-    use tower::{Service, ServiceExt}; // for `call`, `oneshot`, and `ready`
+    render! {
+        div {
+            class: "min-h-screen flex flex-col items-center justify-center text-white",
+            div {
+                class: "card card-bordered border-accent bg-base-300 shadow-2xl mx-4 p-10 rounded-lg",
+                Quote {}
+            }
 
-    #[tokio::test]
-    async fn get_root() {
-        let app = app();
+            Button {}
 
-        let response = app
-            .oneshot(Request::builder().uri("/").body(Body::empty()).unwrap())
-            .await
-            .unwrap();
+            a {
+                aria_label: "Go to the GitHub repository with the code",
+                class: "mt-10 flex hover:text-accent",
+                href: "https://github.com/storopoli/stoic-quotes",
+                target: "_blank",
+                rel: "noopener noreferrer",
+                svg {
+                    class: "w-8 h-8",
+                    fill: "currentColor",
+                    view_box: "0 0 24 24",
+                    path {
+                        fill: "evenodd",
+                        clip: "evenodd",
+                        d: "M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.014-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.532 1.03 1.532 1.03.891 1.529 2.341 1.088 2.912.833.091-.646.349-1.086.635-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.447-1.27.098-2.646 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 7.07c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.547 1.376.203 2.394.1 2.646.64.699 1.028 1.591 1.028 2.682 0 3.841-2.337 4.687-4.565 4.934.359.31.678.92.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48A10.017 10.017 0 0022 12C22 6.477 17.523 2 12 2z",
+                    }
+                }
+                "storopoli/stoic-quotes"
+            }
 
-        assert_eq!(response.status(), StatusCode::OK);
-
-        // Ensuring HTML is in the response by looking for typical HTML tags.
-        let body_bytes = response.into_body().collect().await.unwrap().to_bytes();
-        let body_str = from_utf8(&body_bytes).unwrap();
-        assert!(
-            body_str.contains('<') && body_str.contains('>'),
-            "Body doesn't contain HTML: {body_str}",
-        );
-    }
-
-    #[tokio::test]
-    async fn get_quote() {
-        let app = app();
-
-        let response = app
-            .oneshot(
-                Request::builder()
-                    .uri("/quote")
-                    .body(Body::empty())
-                    .unwrap(),
-            )
-            .await
-            .unwrap();
-
-        assert_eq!(response.status(), StatusCode::OK);
-
-        // Ensuring HTML is in the response by looking for typical HTML tags.
-        let body_bytes = response.into_body().collect().await.unwrap().to_bytes();
-        let body_str = from_utf8(&body_bytes).unwrap();
-        assert!(
-            body_str.contains('<') && body_str.contains('>'),
-            "Body doesn't contain HTML: {body_str}",
-        );
-    }
-
-    #[tokio::test]
-    async fn get_unknown() {
-        let app = app();
-
-        let response = app
-            .oneshot(Request::builder().uri("/foo").body(Body::empty()).unwrap())
-            .await
-            .unwrap();
-
-        assert_eq!(response.status(), StatusCode::NOT_FOUND);
-    }
-
-    #[tokio::test]
-    async fn post_root() {
-        let app = app();
-
-        let response = app
-            .oneshot(
-                Request::builder()
-                    .method("POST")
-                    .uri("/")
-                    .body(Body::empty())
-                    .unwrap(),
-            )
-            .await
-            .unwrap();
-
-        assert_eq!(response.status(), StatusCode::METHOD_NOT_ALLOWED);
-    }
-
-    #[tokio::test]
-    async fn post_quote() {
-        let app = app();
-
-        let response = app
-            .oneshot(
-                Request::builder()
-                    .method("POST")
-                    .uri("/quote")
-                    .body(Body::empty())
-                    .unwrap(),
-            )
-            .await
-            .unwrap();
-
-        assert_eq!(response.status(), StatusCode::METHOD_NOT_ALLOWED)
-    }
-
-    #[tokio::test]
-    async fn post_unknown() {
-        let app = app();
-
-        let response = app
-            .oneshot(
-                Request::builder()
-                    .method("POST")
-                    .uri("/foo")
-                    .body(Body::empty())
-                    .unwrap(),
-            )
-            .await
-            .unwrap();
-
-        assert_eq!(response.status(), StatusCode::NOT_FOUND);
-    }
-
-    #[tokio::test]
-    async fn multiple_request() {
-        let mut app = app().into_service();
-
-        let request = Request::builder().uri("/").body(Body::empty()).unwrap();
-        let response = ServiceExt::<Request<Body>>::ready(&mut app)
-            .await
-            .unwrap()
-            .call(request)
-            .await
-            .unwrap();
-        assert_eq!(response.status(), StatusCode::OK);
-
-        let request = Request::builder().uri("/").body(Body::empty()).unwrap();
-        let response = ServiceExt::<Request<Body>>::ready(&mut app)
-            .await
-            .unwrap()
-            .call(request)
-            .await
-            .unwrap();
-        assert_eq!(response.status(), StatusCode::OK);
-    }
-
-    #[tokio::test]
-    async fn get_root_curl() {
-        let app = app();
-
-        let response = app
-            .oneshot(
-                Request::builder()
-                    .header("User-Agent", "curl/8.4.0")
-                    .uri("/")
-                    .body(Body::empty())
-                    .unwrap(),
-            )
-            .await
-            .unwrap();
-
-        assert_eq!(response.status(), StatusCode::OK);
-
-        // Ensuring no HTML is in the response by looking for typical HTML tags.
-        let body_bytes = response.into_body().collect().await.unwrap().to_bytes();
-        let body_str = from_utf8(&body_bytes).unwrap();
-        assert!(
-            !body_str.contains('<') && !body_str.contains('>'),
-            "Body contains HTML: {body_str}",
-        );
-    }
-
-    #[tokio::test]
-    async fn get_root_wget() {
-        let app = app();
-
-        let response = app
-            .oneshot(
-                Request::builder()
-                    .header("User-Agent", "Wget/1.21.4")
-                    .uri("/")
-                    .body(Body::empty())
-                    .unwrap(),
-            )
-            .await
-            .unwrap();
-
-        assert_eq!(response.status(), StatusCode::OK);
-
-        // Ensuring no HTML is in the response by looking for typical HTML tags.
-        let body_bytes = response.into_body().collect().await.unwrap().to_bytes();
-        let body_str = from_utf8(&body_bytes).unwrap();
-        assert!(
-            !body_str.contains('<') && !body_str.contains('>'),
-            "Body contains HTML: {body_str}",
-        );
-    }
-
-    #[tokio::test]
-    async fn get_quote_htmx() {
-        let app = app();
-
-        let response = app
-            .oneshot(
-                Request::builder()
-                    .uri("/quote")
-                    .body(Body::empty())
-                    .unwrap(),
-            )
-            .await
-            .unwrap();
-
-        assert_eq!(response.status(), StatusCode::OK);
-
-        // Ensuring that we have id = "quote" so that htmx can do its thing
-        let body_bytes = response.into_body().collect().await.unwrap().to_bytes();
-        let body_str = from_utf8(&body_bytes).unwrap();
-        assert!(
-            body_str.contains(r#"id="quote""#),
-            r#"Body does not contain id="quote": {body_str}"#,
-        );
+        }
     }
 }

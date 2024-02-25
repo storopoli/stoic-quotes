@@ -27,7 +27,7 @@ lazy_static! {
 ///     author: "Anonymous".to_string(),
 /// };
 /// ```
-#[derive(Serialize, Deserialize, Clone)]
+#[derive(Serialize, Deserialize, Clone, PartialEq, Eq)]
 pub struct Quote {
     pub text: String,
     pub author: String,
