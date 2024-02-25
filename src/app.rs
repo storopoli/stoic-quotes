@@ -6,8 +6,7 @@ use dioxus::prelude::*;
 use crate::component::{Button, Quote};
 use crate::data::random_quote;
 
-/// Creates an Axum [`Router`] that only handles GET requests to
-/// `/` and `/quote`.
+/// Main App component that renders the whole app.
 #[component]
 pub fn App(cx: Scope) -> Element {
     use_shared_state_provider(cx, random_quote);
