@@ -3,26 +3,32 @@ name = "stoic-quotes"
 version = "0.3.5"
 edition = "2021"
 authors = ["Jose Storopoli <jose@storopoli.io>"]
-description = "Stoic quotes API backend"
+description = "Stoic Quotes PWA"
 license = "MIT"
 readme = "README.md"
 
 [dependencies]
-anyhow = "1"
-askama = "0.12"
-axum = "0.7"
 lazy_static = "1"
+prest = "0.2"
 rand = "0.8"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-tokio = { version = "1", features = ["full"] }
-tower-http = { version = "0.5", features = ["tracing", "trace", "fs"] }
-tracing = "0.1"
-tracing-subscriber = "0.3"
+wasm-bindgen = "0.2"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+getrandom = { version = "0.2", features = ["js"] }
 
 [dev-dependencies]
 http-body-util = "0.1"
+tokio = { version = "1", features = ["rt", "macros"] }
 tower = { version = "0.4", features = ["util"] }
 
+[build-dependencies]
+prest-build = "0.2"
+
 [profile.release]
-lto = true
+opt-level = "z"   # Optimized for size, use 3 for speed
+lto = true        # Enable Link Time Optimization
+codegen-units = 1 # Reduced to increase optimizations
+panic = "abort"   # Abort on panic
+strip = "symbols" # Strip symbols from binary

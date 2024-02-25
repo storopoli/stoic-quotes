@@ -18,16 +18,7 @@ lazy_static! {
 ///
 /// * `text` - A [`String`] that contains the quote text
 /// * `author` - A [`String`] that contains the quote author
-///
-/// # Examples
-///
-/// ```
-/// let quote = Quote {
-///     text: "Hello, world!".to_string(),
-///     author: "Anonymous".to_string(),
-/// };
-/// ```
-#[derive(Serialize, Deserialize, Clone)]
+#[derive(Serialize, Deserialize, Clone, PartialEq, Eq)]
 pub struct Quote {
     pub text: String,
     pub author: String,
@@ -45,8 +36,8 @@ pub fn read_data() -> Result<Vec<Quote>> {
 /// Currently, this function uses [`rand::thread_rng()`] to generate
 /// a random number between 0 and the length of [`struct@QUOTES`].
 /// Then, it clones the [`struct@QUOTES`] at the random index and returns it.
-pub fn random_quote() -> Quote {
+pub fn random_quote() -> &'static Quote {
     let mut rng = thread_rng();
     let index = rng.gen_range(0..QUOTES.len());
-    QUOTES[index].clone()
+    &QUOTES[index]
 }

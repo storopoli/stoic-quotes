@@ -1,16 +1,24 @@
-//! Module that has functions that handles the Axum [`Router`].
+//! # Stoic Quotes
+//!
+//! `stoic-quotes` is a collection of stoic quotes in an Axum web server
+//! that serves stoic quotes with reactivity by the all-mighty
+//! [htmx](https://htmx.org) (no YAVASCRIPT).
+//!
+//! It also has plain-text API GET endpoints at `/` that returns a stoic quote
+//! for terminal users with `curl` and `wget`.
 
-use crate::pages::{plain_quote, quote, root};
-use axum::{http::header::USER_AGENT, http::Request, response::Response, routing::get, Router};
-use std::{env::current_dir, path::PathBuf};
-use tower_http::{services::ServeDir, trace::TraceLayer};
-use tracing::info;
+pub mod data;
+pub mod pages;
+
+use crate::pages::{home, plain_quote, quote};
+use prest::header::USER_AGENT;
+use prest::*;
 
 /// Handles the User Agent header
 /// If the user agent is `curl` or `wget`,
 /// return a plain quote.
 /// Otherwise, return the root page.
-async fn handle_user_agent<T>(req: Request<T>) -> Response {
+async fn handle_user_agent<T>(req: Request<T>) -> Markup {
     let header = Request::headers(&req);
     let user_agent: String = if let Some(user_agent) = header.get(USER_AGENT) {
         user_agent.clone().to_str().unwrap().to_string()
@@ -21,37 +29,46 @@ async fn handle_user_agent<T>(req: Request<T>) -> Response {
     info!("got user agent: {user_agent}");
 
     if user_agent.contains("curl") || user_agent.contains("Wget") {
-        plain_quote().await
+        html! {(plain_quote().await)}
     } else {
-        root().await
+        home().await
     }
+}
+
+pub async fn into_page(content: Markup) -> Markup {
+    let title = "Stoic Quotes";
+    let css = "/assets/main.css";
+    html! {(DOCTYPE) {
+        (Head::default().title(title).css(css))
+        (content)
+        (Scripts::default())
+    }}
 }
 
 /// Creates an Axum [`Router`] that only handles GET requests to
 /// `/` and `/quote`.
 pub fn app() -> Router {
-    let assets_path: PathBuf = current_dir().unwrap();
     // Create a router
     info!("initializing router...");
     Router::new()
         .route("/", get(handle_user_agent))
         .route("/quote", get(quote))
-        .nest_service(
-            "/assets",
-            ServeDir::new(format!("{}/assets", assets_path.to_str().unwrap())),
-        )
-        // We can still add middleware
-        .layer(TraceLayer::new_for_http())
+}
+
+#[cfg(target_arch = "wasm32")]
+#[wasm_bindgen(start)]
+pub fn main() {
+    app().handle_fetch_events()
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
-    use axum::{
-        body::Body,
-        http::{Request, StatusCode},
-    };
     use http_body_util::BodyExt; // for `collect`
+    use prest::{
+        http::{Request, StatusCode},
+        Body,
+    };
     use std::str::from_utf8;
     use tower::{Service, ServiceExt}; // for `call`, `oneshot`, and `ready`
 
