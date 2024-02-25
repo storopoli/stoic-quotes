@@ -1,0 +1,134 @@
+//! # Stoic Quotes
+//!
+//! `stoic-quotes` is a collection of stoic quotes in an Axum web server
+//! that serves stoic quotes with reactivity by the all-mighty
+//! [htmx](https://htmx.org) (no YAVASCRIPT).
+//!
+//! It also has plain-text API GET endpoints at `/` that returns a stoic quote
+//! for terminal users with `curl` and `wget`.
+
+use axum::{http::header::USER_AGENT, http::Request, routing::get, Router};
+use axum_browser_adapter::{
+    axum_response_to_wasm_response, wasm_compat, wasm_request_to_axum_request, WasmRequest,
+    WasmResponse,
+};
+use tower_service::Service;
+use wasm_bindgen::prelude::wasm_bindgen;
+
+mod data;
+mod pages;
+
+//use app::handle_user_agent;
+use pages::{plain_quote, quote};
+
+/// Handles the User Agent header
+/// If the user agent is `curl` or `wget`,
+/// return a plain quote.
+/// Otherwise, return the root page.
+#[wasm_compat]
+pub async fn root() -> String {
+    r#"
+    <!doctype html>
+    <html lang="en" data-theme="dark">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Stoic quotes to nurture your soul." />
+        <title>Stoic Quotes</title>
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+        <link href="./assets/main.css" rel="stylesheet" />
+        <!-- htmx v 1.9.10 -->
+        <script src="./assets/htmx.min.js"></script>
+        <!-- htmx transition -->
+        <style>
+            @keyframes fade-in {
+                from {
+                    opacity: 0;
+                }
+            }
+
+            @keyframes fade-out {
+                to {
+                    opacity: 0;
+                }
+            }
+
+            @keyframes slide-from-right {
+                from {
+                    transform: translateX(90px);
+                }
+            }
+
+            @keyframes slide-to-left {
+                to {
+                    transform: translateX(-90px);
+                }
+            }
+
+            /* define animations for the old and new content */
+            ::view-transition-old(slide-it) {
+                animation:
+                    180ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+                    600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+            }
+
+            ::view-transition-new(slide-it) {
+                animation:
+                    420ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+                    600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+            }
+
+            /* tie the view transition to a given CSS class */
+            .sample-transition {
+                view-transition-name: slide-it;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="min-h-screen flex flex-col items-center justify-center text-white">
+            <div class="card card-bordered border-accent bg-base-300 shadow-2xl mx-4 p-10 rounded-lg">
+                <blockquote hx-get="/quote" hx-swap="outerHTML" hx-trigger="load" id="quote" class="text-center">
+                    Please Enable JavaScript (I know, it sucks...)
+                </blockquote>
+            </div>
+            <button hx-get="/quote" hx-trigger="click" hx-target="\#quote" hx-swap="outerHTML transition:true"
+                aria-label="Refresh" class="btn btn-accent bg-base-300 mt-10">
+                <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                </svg>
+            </button>
+            <a aria-label="Go to the GitHub repository with the code" class="mt-10 flex hover:text-accent"
+                href="https://github.com/storopoli/stoic-quotes" target="_blank" rel="noopener noreferrer">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill="evenodd" clip="evenodd"
+                        d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.014-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.532 1.03 1.532 1.03.891 1.529 2.341 1.088 2.912.833.091-.646.349-1.086.635-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.447-1.27.098-2.646 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 7.07c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.547 1.376.203 2.394.1 2.646.64.699 1.028 1.591 1.028 2.682 0 3.841-2.337 4.687-4.565 4.934.359.31.678.92.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48A10.017 10.017 0 0022 12C22 6.477 17.523 2 12 2z">
+                    </path>
+                </svg>
+                storopoli/stoic-quotes
+            </a>
+        </div>
+    </body>
+
+    </html>
+    "#.to_string()
+}
+
+#[wasm_bindgen]
+pub async fn wasm_app(wasm_request: WasmRequest) -> WasmResponse {
+    // Create a router
+    let mut router: Router = Router::new()
+        .route("/", get(root))
+        .route("/quote", get(quote));
+
+    let request = wasm_request_to_axum_request(&wasm_request).unwrap();
+
+    let axum_response = router.call(request).await.unwrap();
+
+    let response = axum_response_to_wasm_response(axum_response).await.unwrap();
+
+    response
+}

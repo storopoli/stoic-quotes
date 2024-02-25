@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Stoic quotes to nurture your soul." />
+    <title>Stoic Quotes</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link href="./assets/main.css" rel="stylesheet" />
+    <!-- htmx v 1.9.10 -->
+    <script src="./assets/htmx.min.js"></script>
+    <!-- htmx transition -->
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fade-out {
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes slide-from-right {
+            from {
+                transform: translateX(90px);
+            }
+        }
+
+        @keyframes slide-to-left {
+            to {
+                transform: translateX(-90px);
+            }
+        }
+
+        /* define animations for the old and new content */
+        ::view-transition-old(slide-it) {
+            animation:
+                180ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+                600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+        }
+
+        ::view-transition-new(slide-it) {
+            animation:
+                420ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+                600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+        }
+
+        /* tie the view transition to a given CSS class */
+        .sample-transition {
+            view-transition-name: slide-it;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="module">
+        import init, {wasm_app, WasmRequest} from "./stoic_quotes.js";
+
+        (async function () {
+            await init();
+
+            const wasmRequest = new WasmRequest("GET", "/", {}, undefined);
+            let response = await wasm_app(wasmRequest);
+
+            document.write(response.body);
+        })();
+    </script>
+</body>
+
+</html>

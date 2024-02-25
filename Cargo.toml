@@ -7,22 +7,23 @@ description = "Stoic quotes API backend"
 license = "MIT"
 readme = "README.md"
 
+[lib]
+crate-type = ["cdylib"]
+
 [dependencies]
-anyhow = "1"
-askama = "0.12"
-axum = "0.7"
-lazy_static = "1"
+axum = { version = "0.6.19", default-features = false }
+tower-service = "0.3"
 rand = "0.8"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-tokio = { version = "1", features = ["full"] }
-tower-http = { version = "0.5", features = ["tracing", "trace", "fs"] }
-tracing = "0.1"
-tracing-subscriber = "0.3"
+# WASM
+axum-browser-adapter = "0.2.1"
+wasm-bindgen = "0.2.84"
+wasm-bindgen-futures = "0.4.34"
+oneshot = "0.1.5"
 
-[dev-dependencies]
-http-body-util = "0.1"
-tower = { version = "0.4", features = ["util"] }
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+getrandom = { version = "0.2", features = ["js"] }
 
 [profile.release]
 lto = true
