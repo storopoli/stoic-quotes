@@ -1,7 +1,7 @@
 [application]
 
 # App name
-name = "Stoic Quotes"
+name = "StoicQuotes"
 
 # The Dioxus platform to default to
 default_platform = "web"

@@ -11,7 +11,7 @@ use log::info;
 /// Quote
 #[component]
 pub fn Quote(cx: Scope) -> Element {
-    let quote = use_shared_state::<Quote>(cx)
+    let quote = use_shared_state::<&Quote>(cx)
         .expect("failed to get quote shared state")
         .read();
     let text = &quote.text;
@@ -35,7 +35,7 @@ pub fn Quote(cx: Scope) -> Element {
 /// Button that triggers the quote refresh.
 #[component]
 pub fn Button(cx: Scope) -> Element {
-    let quote = use_shared_state::<Quote>(cx).expect("failed to get quote shared state");
+    let quote = use_shared_state::<&Quote>(cx).expect("failed to get quote shared state");
 
     render! {
         button {
