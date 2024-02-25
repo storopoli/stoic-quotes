@@ -9,7 +9,7 @@ use std::clone::Clone;
 
 lazy_static! {
     /// A vector of [`Quote`]s
-    static ref QUOTES: Vec<Quote> = read_data().expect("failed to read data");
+    pub static ref QUOTES: Vec<Quote> = read_data().expect("failed to read data");
 }
 
 /// A quote with text and author
