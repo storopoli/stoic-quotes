@@ -1,0 +1,26 @@
+{
+    "name": "Stoic Quotes",
+    "icons": [
+        {
+            "src": "favicon.ico",
+            "type": "image/png",
+            "sizes": "16x16",
+            "purpose": "any"
+        }
+    ],
+    "start_url": "/",
+    "id": "/",
+    "display": "standalone",
+    "display_override": [
+        "window-control-overlay",
+        "standalone"
+    ],
+    "scope": "/",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "short_name": "Stoic Quotes",
+    "description": "Stoic Quotes PWA",
+    "dir": "ltr",
+    "lang": "en",
+    "orientation": "portrait"
+}
