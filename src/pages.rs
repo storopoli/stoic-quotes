@@ -49,20 +49,20 @@ struct QuoteTemplate {
 }
 
 /// Returns the rendered askama template for the root HTML element.
-pub async fn root() -> Response {
+pub async fn root() -> impl IntoResponse {
     let template = IndexTemplate {};
     HtmlTemplate(template).into_response()
 }
 
 /// Returns the rendered askama template for a random quote HTML element.
-pub async fn quote() -> Response {
+pub async fn quote() -> impl IntoResponse {
     let Quote { text, author } = random_quote();
     let template = QuoteTemplate { text, author };
     HtmlTemplate(template).into_response()
 }
 
 /// Returns a plain text random quote without any HTML.
-pub async fn plain_quote() -> Response {
+pub async fn plain_quote() -> impl IntoResponse {
     let Quote { text, author } = random_quote();
     let formatted_quote: String = format!("{text}\n\n - {author}\n");
     Html(formatted_quote).into_response()

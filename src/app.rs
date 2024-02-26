@@ -1,7 +1,7 @@
 //! Module that has functions that handles the Axum [`Router`].
 
 use crate::pages::{plain_quote, quote, root};
-use axum::{http::header::USER_AGENT, http::Request, response::Response, routing::get, Router};
+use axum::{http::header::USER_AGENT, http::Request, response::IntoResponse, routing::get, Router};
 use std::{env::current_dir, path::PathBuf};
 use tower_http::{services::ServeDir, trace::TraceLayer};
 use tracing::info;
@@ -10,7 +10,7 @@ use tracing::info;
 /// If the user agent is `curl` or `wget`,
 /// return a plain quote.
 /// Otherwise, return the root page.
-async fn handle_user_agent<T>(req: Request<T>) -> Response {
+async fn handle_user_agent<T>(req: Request<T>) -> impl IntoResponse {
     let header = Request::headers(&req);
     let user_agent: String = if let Some(user_agent) = header.get(USER_AGENT) {
         user_agent.clone().to_str().unwrap().to_string()
@@ -21,9 +21,9 @@ async fn handle_user_agent<T>(req: Request<T>) -> Response {
     info!("got user agent: {user_agent}");
 
     if user_agent.contains("curl") || user_agent.contains("Wget") {
-        plain_quote().await
+        plain_quote().await.into_response()
     } else {
-        root().await
+        root().await.into_response()
     }
 }
 
