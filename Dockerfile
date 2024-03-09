@@ -4,8 +4,8 @@ FROM rust:latest as builder
 # Set the working directory
 WORKDIR /usr/src/app
 
-# Copy project's Cargo.toml and Cargo.lock files
-COPY ./Cargo.toml ./Cargo.lock ./
+# Copy project's Cargo.toml file
+COPY ./Cargo.toml ./
 
 # This dummy build is to cache dependencies so they don't need to be rebuilt
 # every time your source changes
