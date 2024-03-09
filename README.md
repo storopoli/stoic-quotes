@@ -42,6 +42,19 @@ $ curl stoicquotes.io
  - Seneca
 ```
 
+## Docker
+
+You can also deploy it using Docker from the GitHub Container Registry:
+
+```bash
+docker pull ghcr.io/storopoli/stoic_quotes:latest
+
+docker run -d --name stoic_quotes -p 443:3000 stoic_quotes
+```
+
+By default it exposes port 3000 on the `axum` server.
+You can safely map to HTTP (port 80) or HTTPS (port 443).
+
 ## License
 
 This content is licensed under a
