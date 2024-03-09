@@ -18,9 +18,12 @@ jobs:
     - name: Build Docker image
       run: docker build -t stoic_quotes .
 
-    - name: Test Docker image
-      run: |
-        docker run -d --name stoic_quotes -p 3000:3000 stoic_quotes
-        sleep 30 # Wait for the application to start
-        curl --fail localhost:3000/ || exit 1
+    - name: Run Docker
+      run: docker run -d --name stoic_quotes -p 3000:3000 stoic_quotes
+
+    - name: Display Docker container logs
+      run: docker logs stoic_quotes
+
+    - name: Test Docker
+      run: curl --fail localhost:3000/ || exit 1
 
