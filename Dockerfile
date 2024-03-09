@@ -4,6 +4,11 @@ FROM rust:latest as builder
 # Set the working directory
 WORKDIR /usr/src/app
 
+# Add labels for OCI annotations
+LABEL org.opencontainers.image.source="https://github.com/storopoli/stoic-quotes" \
+      org.opencontainers.image.description="Stoic Quotes" \
+      org.opencontainers.image.licenses="MIT"
+
 # Copy project's Cargo.toml file
 COPY ./Cargo.toml ./
 
