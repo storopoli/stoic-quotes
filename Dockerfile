@@ -32,11 +32,11 @@ RUN cargo build --release
 FROM debian:buster-slim
 
 # Copy the binary from the builder stage to the new stage
-COPY --from=builder /usr/src/app/target/release/stoic_quotes /usr/local/bin/stoic_quotes
+COPY --from=builder /usr/src/app/target/release/stoic-quotes /usr/local/bin/stoic-quotes
 
 # Expose port 3000
 EXPOSE 3000
 
 # Command to run the binary
-CMD ["stoic_quotes"]
+CMD ["stoic-quotes"]
 
