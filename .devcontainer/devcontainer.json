@@ -5,7 +5,8 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/rust:latest",
 	"features": {
-		"ghcr.io/devcontainers/features/node:latest": {}
+		"ghcr.io/devcontainers/features/node:latest": {},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
 	},
 	// Use 'mounts' to make the cargo cache persistent in a Docker Volume.
 	// "mounts": [
