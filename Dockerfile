@@ -12,8 +12,8 @@ WORKDIR /usr/src/app
 
 # Add labels for OCI annotations
 LABEL org.opencontainers.image.source="https://github.com/storopoli/stoic-quotes" \
-      org.opencontainers.image.description="Stoic Quotes" \
-      org.opencontainers.image.licenses="MIT"
+    org.opencontainers.image.description="Stoic Quotes" \
+    org.opencontainers.image.licenses="MIT"
 
 # Copy project's Cargo.toml file
 COPY ./Cargo.toml ./
@@ -37,8 +37,12 @@ RUN cargo build --release --target x86_64-unknown-linux-musl
 # Start a new stage from a slim version of Debian to reduce the size of the final image
 FROM debian:buster-slim
 
+WORKDIR /usr/src/app
+
 # Copy the binary from the builder stage to the new stage
 COPY --from=builder /usr/src/app/target/x86_64-unknown-linux-musl/release/stoic-quotes /usr/local/bin/stoic-quotes
+# Copy the assets/ from the builder stage to the new stage
+COPY --from=builder /usr/src/app/assets /usr/src/app/assets
 
 # Expose port 3000
 EXPOSE 3000
