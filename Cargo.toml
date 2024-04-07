@@ -1,6 +1,6 @@
 [package]
 name = "stoic-quotes"
-version = "0.3.8"
+version = "0.3.9"
 edition = "2021"
 authors = ["Jose Storopoli <jose@storopoli.io>"]
 description = "Stoic quotes API backend"

@@ -2,7 +2,7 @@
 
 use crate::pages::{plain_quote, quote, root};
 use axum::{http::header::USER_AGENT, http::Request, response::IntoResponse, routing::get, Router};
-use std::{env::current_dir, path::PathBuf};
+use std::{env::current_dir, net::SocketAddr, path::PathBuf};
 use tower_http::{services::ServeDir, trace::TraceLayer};
 use tracing::info;
 
@@ -11,6 +11,11 @@ use tracing::info;
 /// return a plain quote.
 /// Otherwise, return the root page.
 async fn handle_user_agent<T>(req: Request<T>) -> impl IntoResponse {
+    let peer_addr = req
+        .extensions()
+        .get::<SocketAddr>()
+        .map(ToString::to_string)
+        .unwrap_or_else(|| "unknown".to_string());
     let header = Request::headers(&req);
     let user_agent: String = if let Some(user_agent) = header.get(USER_AGENT) {
         user_agent.clone().to_str().unwrap().to_string()
@@ -18,7 +23,7 @@ async fn handle_user_agent<T>(req: Request<T>) -> impl IntoResponse {
         "blank".to_string()
     };
 
-    info!("got user agent: {user_agent}");
+    info!("Request from {peer_addr} with User-Agent: {user_agent}");
 
     if user_agent.contains("curl") || user_agent.contains("Wget") {
         plain_quote().await.into_response()
