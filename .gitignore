@@ -15,3 +15,6 @@ Cargo.lock
 # Node Soydev stuff
 node_modules
 package-lock.json
+
+# MacOS
+.DS_Store
