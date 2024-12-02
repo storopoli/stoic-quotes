@@ -9,8 +9,8 @@
 
 #![allow(non_snake_case)]
 
-use dioxus_logger::tracing::Level;
 use dioxus::launch;
+use dioxus_logger::tracing::Level;
 
 #[cfg(debug_assertions)]
 use log::info;

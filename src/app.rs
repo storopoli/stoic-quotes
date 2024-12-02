@@ -3,7 +3,10 @@
 
 use dioxus::prelude::*;
 
-use crate::{component::{Button, Quote}, data::random_quote};
+use crate::{
+    component::{Button, Quote},
+    data::random_quote,
+};
 
 /// Main App component that renders the whole app.
 #[component]
