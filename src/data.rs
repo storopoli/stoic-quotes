@@ -12,7 +12,7 @@ lazy_static! {
     static ref QUOTES: Vec<Quote> = read_data().expect("failed to read data");
 }
 
-/// A quote with text and author
+/// A quote with text and author.
 ///
 /// # Arguments
 ///
@@ -27,7 +27,7 @@ lazy_static! {
 ///     author: "Anonymous".to_string(),
 /// };
 /// ```
-#[derive(Serialize, Deserialize, Clone)]
+#[derive(Serialize, Deserialize, Clone, PartialEq, Eq)]
 pub struct Quote {
     pub text: String,
     pub author: String,

@@ -43,5 +43,12 @@
 			"group": "test",
 			"label": "rust: cargo clippy"
 		},
+		{
+			"type": "shell",
+			"command": "dx serve --hot-reload",
+			"problemMatcher": [],
+			"group": "build",
+			"label": "dioxus: serve",
+		}
 	]
 }

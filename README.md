@@ -6,54 +6,17 @@
 The whole app runs with [Rust](https://rust-lang.org) using
 [htmx](https://htmx.org)[^yavascript] and plain HTML for "reactivity"[^note].
 
-- [axum](https://tokio.rs/)
+- [dioxus](https://dioxuslabs.com)
 - [askama](https://djc.github.io/askama/)
-- [htmx](https://htmx.org)
 - [tailwindcss](https://tailwindcss.com/)
 - [daisyui](https://daisyui.com)
 - [Satoshi Font](https://www.fontshare.com/fonts/satoshi)
 
+<!-- markdownlint-disable MD033 -->
 <div align="center">
     <img src="screenshot.png" alt="Description" width="300"/>
 </div>
-
-## Performance
-
-This motherfucker is fast AF!
-
-It only consumes 2.2mb of memory and the cheapest CPU VPS available will handle it.
-The JSON data is loaded into memory (so that takes ≈0.2mb).
-Leaving the whole app to consume 2mb of memory.
-
-:heart: Rust!
-
-## Terminal-ready
-
-Yes, if you despise the bloated browsers and you prefer the warm embrace
-of the terminal you can get your stoic quotes without leaving the terminal:
-
-```bash
-$ wget -qO- stoicquotes.io
-"It is better to be despised for simplicity than to suffer agonies from everlasting pretense."
- - Seneca
-
-$ curl stoicquotes.io
-"It is better to be despised for simplicity than to suffer agonies from everlasting pretense."
- - Seneca
-```
-
-## Docker
-
-You can also deploy it using Docker from the GitHub Container Registry:
-
-```bash
-docker pull ghcr.io/storopoli/stoic_quotes:latest
-
-docker run -d --name stoic_quotes -p 443:3000 stoic_quotes
-```
-
-By default it exposes port 3000 on the `axum` server.
-You can safely map to HTTP (port 80) or HTTPS (port 443).
+<!-- markdownlint-enable MD033 -->
 
 ## License
 

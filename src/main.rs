@@ -2,41 +2,33 @@
 //!
 //! `stoic-quotes` is a collection of stoic quotes in an Axum web server
 //! that serves stoic quotes with reactivity by the all-mighty
-//! [htmx](https://htmx.org) (no YAVASCRIPT).
+//! [`dioxus`](https://dioxuslabs.com) (no YAVASCRIPT!)
 //!
 //! It also has plain-text API GET endpoints at `/` that returns a stoic quote
 //! for terminal users with `curl` and `wget`.
 
-use anyhow::{Context, Result};
-use axum::serve;
-use tokio::net::TcpListener;
-use tracing::{info, Level};
-use tracing_subscriber::FmtSubscriber;
+#![allow(non_snake_case)]
+
+use dioxus::launch;
+use dioxus_logger::tracing::Level;
+
+#[cfg(debug_assertions)]
+use log::info;
 
 mod app;
+mod component;
 mod data;
-mod pages;
 
-use app::app;
+use app::App;
 
-#[tokio::main]
-async fn main() -> Result<()> {
-    // Set up logging
-    let subscriber = FmtSubscriber::builder()
-        // all spans/events with a level higher than TRACE (e.g, debug, info, warn, etc.)
-        // will be written to stdout.
-        .with_max_level(Level::TRACE)
-        .finish();
-    tracing::subscriber::set_global_default(subscriber).expect("setting default subscriber failed");
-
-    let app = app();
-
-    // run our app with hyper, listening globally on port 3000
-    let port = 3000_u16;
-    let addr = TcpListener::bind(format!("0.0.0.0:{port}")).await.unwrap();
-    info!("router initialized, listening on port {:?}", port);
-    serve(addr, app)
-        .await
-        .context("error while starting server")?;
-    Ok(())
+pub fn main() {
+    #[cfg(debug_assertions)]
+    {
+        // init logger for Dioxus
+        dioxus_logger::init(Level::INFO).expect("failed to init logger");
+    }
+    // launch the web app
+    #[cfg(debug_assertions)]
+    info!("Launching Stoic Quotes app");
+    launch(App);
 }
