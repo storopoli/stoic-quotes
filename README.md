@@ -4,10 +4,10 @@
 [![MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://opensource.org/license/mit/)
 
 The whole app runs with [Rust](https://rust-lang.org) using
-[htmx](https://htmx.org)[^yavascript] and plain HTML for "reactivity"[^note].
+[dioxus](https://dioxuslabs.com)[^yavascript].
 
-- [dioxus](https://dioxuslabs.com)
-- [askama](https://djc.github.io/askama/)
+Additional libraries:
+
 - [tailwindcss](https://tailwindcss.com/)
 - [daisyui](https://daisyui.com)
 - [Satoshi Font](https://www.fontshare.com/fonts/satoshi)
@@ -30,4 +30,3 @@ The source code is licensed under a
 [![MIT](https://upload.wikimedia.org/wikipedia/commons/f/f8/License_icon-mit-88x31-2.svg)](https://opensource.org/license/mit/)
 
 [^yavascript]: Look Mum! No YAVASCRIPT!
-[^note]: [Hypermedia-Driven Applications](https://htmx.org/essays/hypermedia-driven-applications/)
