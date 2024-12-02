@@ -1,7 +1,7 @@
 [application]
 
 # App name
-name = "StoicQuotes"
+name = "Stoic Quotes"
 
 # The Dioxus platform to default to
 default_platform = "web"
@@ -13,9 +13,9 @@ out_dir = "dist"
 asset_dir = "assets"
 
 [web.app]
+
 # HTML title tag content
 title = "Stoic Quotes"
-base_path = ""
 
 [web.watcher]
 

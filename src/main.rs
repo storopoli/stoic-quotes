@@ -9,10 +9,11 @@
 
 #![allow(non_snake_case)]
 
-use dioxus_web::launch;
+use dioxus_logger::tracing::Level;
+use dioxus::launch;
 
 #[cfg(debug_assertions)]
-use log::{info, LevelFilter};
+use log::info;
 
 mod app;
 mod component;
@@ -24,7 +25,7 @@ pub fn main() {
     #[cfg(debug_assertions)]
     {
         // init logger for Dioxus
-        dioxus_logger::init(LevelFilter::Info).expect("failed to init logger");
+        dioxus_logger::init(Level::INFO).expect("failed to init logger");
     }
     // launch the web app
     #[cfg(debug_assertions)]

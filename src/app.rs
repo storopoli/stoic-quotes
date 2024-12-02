@@ -3,23 +3,21 @@
 
 use dioxus::prelude::*;
 
-use crate::component::{Button, Quote};
-use crate::data::random_quote;
+use crate::{component::{Button, Quote}, data::random_quote};
 
 /// Main App component that renders the whole app.
 #[component]
-pub fn App(cx: Scope) -> Element {
-    use_shared_state_provider(cx, random_quote);
-
-    render! {
+pub fn App() -> Element {
+    let quote = use_signal(random_quote);
+    rsx! {
         div {
             class: "min-h-screen flex flex-col items-center justify-center text-white",
             div {
                 class: "card card-bordered border-accent bg-base-300 shadow-2xl mx-4 p-10 rounded-lg",
-                Quote {}
+                Quote { quote }
             }
 
-            Button {}
+            Button { quote }
 
             a {
                 aria_label: "Go to the GitHub repository with the code",

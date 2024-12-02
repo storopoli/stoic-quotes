@@ -10,13 +10,10 @@ use log::info;
 
 /// Quote
 #[component]
-pub fn Quote(cx: Scope) -> Element {
-    let quote = use_shared_state::<&Quote>(cx)
-        .expect("failed to get quote shared state")
-        .read();
-    let text = &quote.text;
-    let author = &quote.author;
-    render! {
+pub fn Quote(quote: Signal<Quote>) -> Element {
+    let text = &quote.read().text;
+    let author = &quote.read().author;
+    rsx! {
         blockquote {
             id: "quote",
             class: "text-center",
@@ -34,10 +31,8 @@ pub fn Quote(cx: Scope) -> Element {
 
 /// Button that triggers the quote refresh.
 #[component]
-pub fn Button(cx: Scope) -> Element {
-    let quote = use_shared_state::<&Quote>(cx).expect("failed to get quote shared state");
-
-    render! {
+pub fn Button(quote: Signal<Quote>) -> Element {
+    rsx! {
         button {
             aria_label: "Refresh",
             class: "btn btn-accent bg-base-300 mt-10",
@@ -45,7 +40,7 @@ pub fn Button(cx: Scope) -> Element {
                 #[cfg(debug_assertions)]
                 info!("Generated a new quote");
 
-                *quote.write() = random_quote();
+                quote.set(random_quote());
             },
             svg {
                 class: "w-6 h-6 text-white",

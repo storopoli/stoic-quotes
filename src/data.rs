@@ -12,7 +12,7 @@ lazy_static! {
     static ref QUOTES: Vec<Quote> = read_data().expect("failed to read data");
 }
 
-/// A quote with text and author
+/// A quote with text and author.
 ///
 /// # Arguments
 ///
@@ -45,8 +45,8 @@ pub fn read_data() -> Result<Vec<Quote>> {
 /// Currently, this function uses [`rand::thread_rng()`] to generate
 /// a random number between 0 and the length of [`struct@QUOTES`].
 /// Then, it clones the [`struct@QUOTES`] at the random index and returns it.
-pub fn random_quote() -> &'static Quote {
+pub fn random_quote() -> Quote {
     let mut rng = thread_rng();
     let index = rng.gen_range(0..QUOTES.len());
-    &QUOTES[index]
+    QUOTES[index].clone()
 }
