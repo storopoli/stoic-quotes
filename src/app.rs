@@ -2,6 +2,7 @@
 //! the whole app.
 
 use dioxus::prelude::*;
+use document::Stylesheet;
 
 use crate::{
     component::{Button, Quote},
@@ -13,6 +14,7 @@ use crate::{
 pub fn App() -> Element {
     let quote = use_signal(random_quote);
     rsx! {
+        Stylesheet { href: asset!("./assets/main.css") }
         div {
             class: "min-h-screen flex flex-col items-center justify-center text-white",
             div {

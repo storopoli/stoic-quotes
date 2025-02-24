@@ -10,6 +10,7 @@
 #![allow(non_snake_case)]
 
 use dioxus::launch;
+#[cfg(debug_assertions)]
 use dioxus_logger::tracing::Level;
 
 #[cfg(debug_assertions)]

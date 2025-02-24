@@ -3,14 +3,14 @@
 
 use dioxus::prelude::*;
 
-use crate::data::{random_quote, Quote};
+use crate::data::{random_quote, QuoteEntry};
 
 #[cfg(debug_assertions)]
 use log::info;
 
 /// Quote
 #[component]
-pub fn Quote(quote: Signal<Quote>) -> Element {
+pub fn Quote(quote: Signal<QuoteEntry>) -> Element {
     let text = &quote.read().text;
     let author = &quote.read().author;
     rsx! {
@@ -31,7 +31,7 @@ pub fn Quote(quote: Signal<Quote>) -> Element {
 
 /// Button that triggers the quote refresh.
 #[component]
-pub fn Button(quote: Signal<Quote>) -> Element {
+pub fn Button(quote: Signal<QuoteEntry>) -> Element {
     rsx! {
         button {
             aria_label: "Refresh",
