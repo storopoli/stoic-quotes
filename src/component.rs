@@ -3,7 +3,7 @@
 
 use dioxus::prelude::*;
 
-use crate::data::{random_quote, QuoteEntry};
+use crate::data::{QuoteEntry, random_quote};
 
 #[cfg(debug_assertions)]
 use log::info;

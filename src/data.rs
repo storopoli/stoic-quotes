@@ -2,9 +2,9 @@
 //! into stoic quotes.
 
 use lazy_static::lazy_static;
-use rand::{thread_rng, Rng};
+use rand::{Rng, thread_rng};
 use serde::{Deserialize, Serialize};
-use serde_json::{from_str, Result};
+use serde_json::{Result, from_str};
 use std::clone::Clone;
 
 lazy_static! {
