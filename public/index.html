@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Stoic Quotes</title>
+        <script>
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("/./assets/sw.js");
+            }
+        </script>
+        <link rel="manifest" href="manifest.json" />
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8" />
+        <link rel="preload" as="script" href="/./assets/stoic-quotes-0b2cc8d9c3b2137d.js" crossorigin><link rel="preload" as="fetch" type="application/wasm" href="/./assets/stoic-quotes_bg-82b7932ad5d4526c.wasm" crossorigin>
+    </head>
+    <body>
+        <div id="main"></div>
+    <script>
+            // We can't use a module script here because we need to start the script immediately when streaming
+            import("/./assets/stoic-quotes-0b2cc8d9c3b2137d.js").then(
+                ({ default: init }) => {
+                init("/./assets/stoic-quotes_bg-82b7932ad5d4526c.wasm").then((wasm) => {
+                    if (wasm.__wbindgen_start == undefined) {
+                    wasm.main();
+                    }
+                });
+                }
+            );
+            </script>
+            
+            </body>
+</html>
