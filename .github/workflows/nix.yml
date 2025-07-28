@@ -1,0 +1,52 @@
+name: Nix Flake
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  self-care:
+    name: Flake self-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          persist-credentials: false
+
+      - name: Check Nix flake inputs
+        uses: DeterminateSystems/flake-checker-action@0af51e37404acfb298f7e2eec77470be27eb57c5 # v10
+        with:
+          fail-mode: true
+
+  config-tests:
+    name: "${{ matrix.os-name }} Nix Test"
+    permissions:
+      contents: read
+      id-token: write
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            os-name: "Linux x86"
+          - os: macos-latest
+            os-name: "macOS Apple Silicon"
+    steps:
+      - name: "Checkout Repo"
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          persist-credentials: false
+
+      - name: "Install Nix"
+        uses: DeterminateSystems/nix-installer-action@21a544727d0c62386e78b4befe52d19ad12692e3 # v17
+
+      - name: "Nix Cache"
+        uses: DeterminateSystems/flakehub-cache-action@134cf641155463d87d343c6cb2b7970089967b99 # v2
+
+      - name: "Test Nix Package"
+        run: nix build -L .
