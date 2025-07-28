@@ -15,3 +15,7 @@ package-lock.json
 
 # Dioxus stuff
 dist/
+
+# Nix
+result
+.pre-commit-config.yaml
