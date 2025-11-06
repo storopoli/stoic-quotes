@@ -2,6 +2,7 @@
   description = "Stoic Quotes";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
@@ -21,6 +22,7 @@
     {
       self,
       nixpkgs,
+      nixpkgs-unstable,
       rust-overlay,
       flake-utils,
       pre-commit-hooks,
@@ -32,19 +34,20 @@
         overlays = [ (import rust-overlay) ];
 
         pkgs = import nixpkgs { inherit system overlays; };
+        pkgs-unstable = import nixpkgs-unstable { inherit system overlays; };
 
         rust = pkgs.rust-bin.stable."1.87.0".default.override {
           targets = [ "wasm32-unknown-unknown" ];
         };
 
-        package_version = "0.5.0";
+        package_version = "0.6.0";
 
         buildInputs = with pkgs; [
           bashInteractive
           rust
           openssl
           tailwindcss
-          dioxus-cli
+          pkgs-unstable.dioxus-cli
         ];
         nativeBuildInputs = with pkgs; [ pkg-config ];
       in
