@@ -2,7 +2,7 @@
 //! into stoic quotes.
 
 use lazy_static::lazy_static;
-use rand::{Rng, thread_rng};
+use rand::{Rng, rng};
 use serde::{Deserialize, Serialize};
 use serde_json::{Result, from_str};
 use std::clone::Clone;
@@ -46,7 +46,7 @@ pub fn read_data() -> Result<Vec<QuoteEntry>> {
 /// a random number between 0 and the length of [`struct@QUOTES`].
 /// Then, it clones the [`struct@QUOTES`] at the random index and returns it.
 pub fn random_quote() -> QuoteEntry {
-    let mut rng = thread_rng();
-    let index = rng.gen_range(0..QUOTES.len());
+    let mut rng = rng();
+    let index = rng.random_range(0..QUOTES.len());
     QUOTES[index].clone()
 }
