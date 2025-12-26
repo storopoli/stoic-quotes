@@ -2,7 +2,7 @@ name: GitHub Pages
 
 env:
   CARGO_TERM_COLOR: always
-  DIOXUS_VERSION: 0.7.1
+  DIOXUS_VERSION: 0.7.2
 
 on:
   push:
