@@ -1,7 +1,7 @@
 {
   description = "Stoic Quotes";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     rust-overlay = {
@@ -40,7 +40,7 @@
           targets = [ "wasm32-unknown-unknown" ];
         };
 
-        package_version = "0.6.0";
+        package_version = "0.6.1";
 
         buildInputs = with pkgs; [
           bashInteractive
