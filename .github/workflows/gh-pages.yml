@@ -6,18 +6,20 @@ env:
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 
 permissions: {}
 
 jobs:
-  build-deploy:
+  build:
+    name: Build
     runs-on: ubuntu-latest
     permissions:
-      # For the push to `gh-pages` branch.
-      contents: write
-      pages: write
+      contents: read
+      actions: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v4
@@ -36,8 +38,27 @@ jobs:
       - name: Build app
         run: dx bundle --release
 
-      - name: Deploy Project 🚀
-        uses: JamesIves/github-pages-deploy-action@4a3abc783e1a24aeb44c16e869ad83caf6b4cc23 # v4
+      - name: Upload static files as artifact
+        id: upload-artifact
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
         with:
-          branch: gh-pages
-          folder: dist/public
+          path: dist/public
+
+  deploy:
+    name: Deploy
+    permissions:
+      # For the push to `gh-pages` branch.
+      id-token: write
+      contents: write
+      pages: write
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        if: success()
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
